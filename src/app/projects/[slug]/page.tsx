@@ -7,7 +7,7 @@ import Link from "next/link";
 import projects from "@/data/projects";
 import StackIcon from "tech-stack-icons";
 import { BsStack, BsCardImage } from "react-icons/bs";
-import { FaUsers, FaUserTie, FaClock, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import AnimatedArticle from "@/components/AnimatedArticle";
 import { techStackMap } from "@/lib/constants";
 import { pageParams } from "@/lib/types";

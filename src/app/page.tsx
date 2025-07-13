@@ -26,11 +26,6 @@ import {
  * This is accessed at the root URL ("/") of the application.
  */
 export default function Home() {
-  const getTimeSafe = (dateStr: string | undefined) => {
-    const date = new Date(dateStr ?? "");
-    return isNaN(date.getTime()) ? 0 : date.getTime();
-  };
-
   return (
     <section className="px-4 max-w-4xl mx-auto">
       {/* Intro Section */}
@@ -43,16 +38,16 @@ export default function Home() {
       >
         {/* Introductory Text */}
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Hi, I&#39;m Jerry 👋
+          Hi, I&apos;m Jerry 👋
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
           I graduated from Nanyang Technological University with a strong
           interest in combining AI and business to create impactful, real-world
-          solutions. I enjoy turning ideas into practical tools - whether it's
-          building smart chatbots, developing financial models, or leading
-          innovative tech projects. When I'm not working, you’ll often find me
-          exploring new places, going to the gym, or reflecting over a good cup
-          of coffee.
+          solutions. I enjoy turning ideas into practical tools - whether
+          it&apos;s building smart chatbots, developing financial models, or
+          leading innovative tech projects. When I&apos;m not working,
+          you&apos;ll often find me exploring new places, going to the gym, or
+          reflecting over a good cup of coffee.
         </p>
 
         {/* Current Work Description or other highlights */}

@@ -136,8 +136,8 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     But slowly, I found my place. I joined clubs, made friends
                     who became family, and discovered that my rural Vietnamese
-                    background wasn't a barrier - it was my strength. Every late
-                    night studying became a reminder of why I was here.
+                    background wasn&apos;t a barrier - it was my strength. Every
+                    late night studying became a reminder of why I was here.
                   </p>
                 </div>
                 <div className="relative">
@@ -268,7 +268,8 @@ export default async function EducationItemPage(props: { params: pageParams }) {
               </h3>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>
-                  • <strong>Dean's List</strong> AY2024-2025 (Top 5% of cohort)
+                  • <strong>Dean&apos;s List</strong> AY2024-2025 (Top 5% of
+                  cohort)
                 </li>
                 <li>
                   • <strong>Rank 2</strong>, NTU CAO-WorldQuant Brain Alphathon
@@ -299,7 +300,7 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                   Challenge for Young Entrepreneurs (I2CE) 2023
                 </li>
                 <li>
-                  • <strong>2nd Runner Up</strong>, L'Oréal Brandstorm 2023
+                  • <strong>2nd Runner Up</strong>, L&apos;Oréal Brandstorm 2023
                   Singapore
                 </li>
                 <li>
@@ -365,8 +366,8 @@ export default async function EducationItemPage(props: { params: pageParams }) {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The friendships I made during this short but intense program
                 will last a lifetime. We shared late-night study sessions,
-                explored Seoul together, and learned from each other's diverse
-                backgrounds and perspectives.
+                explored Seoul together, and learned from each other&apos;s
+                diverse backgrounds and perspectives.
               </p>
             </div>
           </div>
