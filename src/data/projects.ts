@@ -1,58 +1,90 @@
 const projects = [
-    {
-        slug: 'project-A',
-        title: 'YouNovate',
-        image: '/projects/pictureA.jpg',
-        description: 'A platform for innovative ideas and solutions.',
-        startDate: '2023-01',
-        endDate: '2023-06',
-        techStack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js', 'PostgreSQL', 'aws'],
-    },
-    {
-        slug: 'project-B',
-        title: 'VoteChain',
-        image: '/projects/pictureB.jpg',
-        description: 'A decentralized voting system using blockchain technology.',
-        startDate: '2022-03',
-        endDate: '2022-09',
-        techStack: ['Solidity', 'Ethereum', 'React', 'Web3.js', 'IPFS'],
-    },
-    {
-        slug: 'project-C',
-        title: 'FinAI',
-        image: '/projects/pictureC.jpg',
-        description: 'An AI-driven financial analysis tool.',
-        startDate: '2021-06',
-        endDate: '2021-12',
-        techStack: ['Python', 'TensorFlow', 'Flask', 'React Native', 'MongoDB'],
-    },
-    {
-        slug: 'project-D',
-        title: 'AeroDeliver',
-        image: '/projects/pictureD.jpg',
-        description: 'An urban drone delivery service.',
-        startDate: '2020-08',
-        endDate: '2021-02',
-        techStack: ['C++', 'ROS (Robot Operating System)', 'Python', 'OpenCV', 'AWS IoT'],
-    },
-    {
-        slug: 'project-E',
-        title: 'FitVR',
-        image: '/projects/pictureE.jpg',
-        description: 'A virtual reality fitness platform.',
-        startDate: '2021-11',
-        endDate: '2022-05',
-        techStack: ['Unity', 'C#', 'Oculus SDK', 'Blender', 'Firebase'],
-    },
-    {
-        slug: 'project-F',
-        title: 'SmartHive',
-        image: '/projects/pictureF.jpg',
-        description: 'An IoT solution for smart beekeeping.',
-        startDate: '2020-02',
-        endDate: '2020-08',
-        techStack: ['Arduino', 'Raspberry Pi', 'Python', 'MQTT', 'React'],
-    },
-]
+  {
+    slug: "project-A",
+    title: "LLM-KG Integration Framework",
+    image: "/projects/fyp.jpg",
+    description:
+      "A framework integrating Large Language Models with Knowledge Graphs to improve accuracy and explainability.",
+    startDate: "2024-08",
+    endDate: "2025-04",
+    techStack: ["Python", "LLMs", "Knowledge Graphs", "SPARQL"],
+  },
+  {
+    slug: "project-B",
+    title: "Moodify",
+    image: "/projects/dip.jpg",
+    description:
+      "A React Native mobile app for enhanced music streaming with AI recommendations and VR concerts.",
+    startDate: "2024-01",
+    endDate: "2024-05",
+    techStack: [
+      "React Native",
+      "JavaScript",
+      "AI/ML",
+      "VR",
+      "Firebase",
+      "Spotify API",
+    ],
+  },
+  {
+    slug: "project-C",
+    title: "Auto-Email-Reply",
+    image: "/projects/simplifynext.png",
+    description:
+      "NTU SimplifyNext RPA x GenAI Hackathon Project - AI-powered email automation system for student administrative queries.",
+    startDate: "2024-01",
+    endDate: "2024-03",
+    techStack: ["Python", "OpenAI GPT-3.5", "RAG", "RPA", "spaCy", "NLP"],
+  },
+  {
+    slug: "project-D",
+    title: "Shopee Product & Design Challenge 2022",
+    image: "/projects/shopee.png",
+    description:
+      "Shopee Card: New attractive way of contactless payment in Singapore for millennials and Gen Z.",
+    startDate: "2024-01",
+    endDate: "2024-03",
+    techStack: [
+      "Product Design",
+      "UX/UI",
+      "FinTech",
+      "Mobile App",
+      "Payment Systems",
+    ],
+  },
+  {
+    slug: "project-E",
+    title: "CarePlus",
+    image: "/projects/web.jpeg",
+    description:
+      "An all-in-one healthcare platform with AI-powered chatbot and virtual consultations.",
+    startDate: "2023-06",
+    endDate: "2023-12",
+    techStack: [
+      "React Native",
+      "AI/ML",
+      "Video Calling",
+      "Maps API",
+      "Chatbot",
+      "Firebase",
+    ],
+  },
+  {
+    slug: "project-F",
+    title: "NTU THINKING & COMMUNICATING VISUALLY",
+    image: "/projects/pictureF.png",
+    description:
+      "NTU courses in visual communication and design including DA2002 (Thinking and Communicating Visually) and DA3000 (Autodesk Inventor).",
+    startDate: "2021-08",
+    endDate: "2023-05",
+    techStack: [
+      "Visual Design",
+      "Autodesk Inventor",
+      "3D Modeling",
+      "CAD",
+      "Creative Thinking",
+    ],
+  },
+];
 
-export default projects
+export default projects;

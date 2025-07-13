@@ -1,42 +1,80 @@
 ---
-title: "Project FinAI"
-teamSize: 3
-role: "AI Engineer"
-description: "Project FinAI is an AI-powered personal finance assistant that helps users manage their budgets, track expenses, and achieve financial goals."
-duration: "06/2021–12/2021"
-techStack:
-  - Python
-  - TensorFlow
-  - Flask
-  - React Native
-  - MongoDB
-githubUrl: "https://github.com/project-FinAI"
+title: "Auto-Email-Reply"
+description: "NTU SimplifyNext RPA x GenAI Hackathon Project - AI-powered email automation system for student administrative queries with 80% response time reduction."
+image: "/projects/pictureC.jpg"
+githubUrl: "https://github.com/anh-nguyenn/NTU-CAO-x-SimplifyNext-RPA-x-GEN-AI-Hackathon"
+liveUrl: ""
+techStack: ["Python", "OpenAI GPT-3.5", "RAG", "UiPath RPA", "spaCy", "NLP"]
 ---
 
-# Introduction
+# Auto-Email-Reply
 
-Project FinAI is a mobile application that uses artificial intelligence to provide personalized financial advice. It helps users make informed decisions about their spending and savings.
+## Project Overview
 
-## Key Features
+**NTU SimplifyNext RPA x GenAI Hackathon Project**  
+**Duration**: January 2024 - March 2024
 
-- **Expense Tracking**: Automatically categorizes transactions and provides spending insights.
-- **Budget Planning**: Suggests budgets based on user income and spending patterns.
-- **Goal Setting**: Helps users set and achieve financial goals with actionable recommendations.
-- **AI Chatbot**: Provides real-time financial advice through a conversational interface.
+Developed a solution integrating Generative AI and RPA to streamline student administrative queries, reducing response times by 80%. Enhanced OpenAI GPT-3.5 with a retrieval-augmented generation (RAG) system for context-aware email automation and designed an NLP masking algorithm using spaCy to protect sensitive data during processing.
 
-## Technical Insights
+## Project Background
 
-- **AI Models**: Built predictive models using TensorFlow to analyze spending patterns and forecast future expenses.
-- **Backend**: Developed a Flask API to handle user data and integrate AI functionalities.
-- **Mobile App**: Created a cross-platform app using React Native for iOS and Android.
-- **Database**: Used MongoDB for storing user data securely and efficiently.
+### Hackathon Context
 
-## Challenges and Solutions
+- **Event**: NTU SimplifyNext RPA x GenAI Hackathon
+- **Focus**: Automation and AI integration for administrative efficiency
+- **Challenge**: Streamlining student administrative processes
+- **Duration**: 3-month intensive development period
 
-- **Data Privacy**: Implemented encryption and anonymization techniques to protect user data.
-- **Accuracy**: Trained AI models on diverse datasets to improve prediction accuracy.
-- **Integration**: Ensured seamless integration of AI features with the mobile app.
+### Presentation Slides
 
-## Outcome
+<div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mt-6">
+  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">
+    HMJ-CAO-SimplifyNext Presentation
+  </h3>
+  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+    <iframe
+      src="/pdf/HMJ-CAO-Simplifynext-Presetation Slide.pdf"
+      className="w-full h-96 rounded-lg"
+      title="HMJ-CAO-SimplifyNext Presentation Slides"
+    />
+  </div>
+  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
+    HMJ-CAO-Simplifynext-Presetation Slide.pdf - Complete presentation slides
+    from the hackathon
+  </p>
+</div>
 
-Project FinAI was launched on app stores and received positive feedback for its user-friendly interface and accurate financial insights. It helped users save an average of 15% on monthly expenses.
+### Problem Statement
+
+Student administrative offices face significant challenges:
+
+- **High Volume**: Thousands of repetitive email queries daily
+- **Slow Response Times**: Manual processing takes hours to days
+- **Resource Intensive**: Administrative staff overwhelmed with routine tasks
+- **Inconsistent Responses**: Human responses vary in quality and accuracy
+- **Data Privacy Concerns**: Sensitive student information in emails
+
+## Solution Architecture
+
+### Core Components
+
+#### 1. Generative AI Integration
+
+- **OpenAI GPT-3.5**: Primary language model for email generation
+- **Retrieval-Augmented Generation (RAG)**: Context-aware response generation
+- **Fine-tuning**: Custom training for administrative domain knowledge
+- **Response Templates**: Structured email templates for consistency
+
+#### 2. RPA (Robotic Process Automation)
+
+- **Email Monitoring**: Automated email inbox scanning
+- **Query Classification**: Intelligent categorization of student requests
+- **Response Automation**: Automated email composition and sending
+- **Workflow Integration**: Seamless integration with existing systems
+
+#### 3. NLP Data Protection
+
+- **spaCy Integration**: Advanced natural language processing
+- **Masking Algorithm**: Sensitive data protection during processing
+- **Privacy Compliance**: GDPR and data protection standards
+- **Audit Trail**: Complete processing logs for compliance

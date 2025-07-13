@@ -14,7 +14,8 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = {
     /* config options here */
     reactStrictMode: true,
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    transpilePackages: ["next-mdx-remote"]
 };
 
 // Merge MDX config with Next.js config

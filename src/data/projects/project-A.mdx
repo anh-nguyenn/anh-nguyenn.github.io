@@ -1,44 +1,35 @@
 ---
-title: "Project YouNovate"
-teamSize: 4
-role: "Full-Stack Developer"
-description: "Project YouNovate is a cutting-edge platform designed to revolutionize the way teams collaborate on software development projects."
-duration: "01/2023–06/2023"
-techStack:
-  - React
-  - TypeScript
-  - TailwindCSS
-  - Node.js
-  - PostgreSQL
-  - aws
-githubUrl: "https://github.com/project-YouNovate"
+title: "LLM-KG Integration Framework"
+description: "A framework integrating Large Language Models with Knowledge Graphs to improve accuracy and explainability of factual responses."
+techStack: ["Python", "LLMs", "Knowledge Graphs", "SPARQL", "Machine Learning"]
 ---
 
-# Introduction
+Large Language Models (LLMs) have demonstrated remarkable language understanding and generation capabilities but often suffer from hallucinations and lack of interpretability. To address these issues, we present a framework that integrates LLMs with Knowledge Graphs (KGs) to improve the accuracy and explainability of the facts. This paper introduces a multistage architecture and a fine-tuning pipeline for SPARQL query generation.
 
-Project YouNovate is a comprehensive collaboration platform tailored for software development teams. It combines task management, real-time communication, and code integration into a single, seamless experience.
+Compared to existing LLM baselines, our approach achieves more reliable factual grounding and provides clearer explanations through structured KG reasoning.
 
-## Key Features
+### Research Contributions
 
-- **Task Management**: A Kanban-style board for tracking tasks, sprints, and milestones.
-- **Real-Time Collaboration**: Integrated chat and video conferencing for team discussions.
-- **Code Integration**: Direct integration with GitHub for pull requests, issue tracking, and code reviews.
-- **Analytics Dashboard**: Visualize team performance with metrics like velocity, code churn, and deployment frequency.
+- Novel framework for LLM-KG integration
+- Fine-tuning pipeline for SPARQL query generation
+- Comprehensive evaluation methodology
+- Open-source implementation for the research community
 
-## Technical Insights
+## Research Paper PDF
 
-- **Frontend**: Built with React and TypeScript, the UI is highly responsive and optimized for performance. TailwindCSS was used for rapid prototyping and consistent styling.
-- **Backend**: A Node.js server with an Express framework powers the API, ensuring scalability and reliability.
-- **Database**: PostgreSQL was chosen for its robust relational data handling, with Sequelize as the ORM.
-- **Cloud Infrastructure**: Hosted on AWS, leveraging services like EC2, S3, and RDS for deployment, storage, and database management.
-- **CI/CD Pipeline**: Implemented using GitHub Actions for automated testing, linting, and deployment.
-
-## Challenges and Solutions
-
-- **Real-Time Communication**: Implemented WebSocket-based communication for chat and notifications, ensuring low latency.
-- **Scalability**: Designed the backend with a microservices architecture to handle increasing user loads.
-- **Security**: Integrated OAuth 2.0 for secure authentication and role-based access control.
-
-## Outcome
-
-Project YouNovate was successfully deployed and adopted by several development teams, improving their productivity and collaboration. The platform received positive feedback for its intuitive design and robust feature set.
+<div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mt-6">
+  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">
+    Final Year Project Report
+  </h3>
+  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+    <iframe
+      src="/pdf/FYP-2024_2025-Anh-Nguyen.pdf"
+      className="w-full h-96 rounded-lg"
+      title="Final Year Project Report"
+    />
+  </div>
+  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
+    FYP-2024_2025-Anh-Nguyen.pdf - Complete research paper with methodology and
+    results
+  </p>
+</div>
