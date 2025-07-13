@@ -54,7 +54,7 @@ const projects = [
   },
   {
     slug: "project-E",
-    title: "CarePlus",
+    title: "IE4727 Web Application Design Project - CarePlus",
     image: "/projects/web.jpeg",
     description:
       "An all-in-one healthcare platform with AI-powered chatbot and virtual consultations.",
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     slug: "project-F",
-    title: "NTU THINKING & COMMUNICATING VISUALLY",
+    title: "NTU Thinking & Communicating Visually",
     image: "/projects/pictureF.png",
     description:
       "NTU courses in visual communication and design including DA2002 (Thinking and Communicating Visually) and DA3000 (Autodesk Inventor).",

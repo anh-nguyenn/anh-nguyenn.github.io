@@ -22,7 +22,7 @@ import {
 } from "react-icons/fa";
 
 /**
- * Home component that serves as the main landing page for the portfolio.
+ * Home component that serves as the main landing page for the glance of my story.
  * This is accessed at the root URL ("/") of the application.
  */
 export default function Home() {
@@ -38,25 +38,24 @@ export default function Home() {
       >
         {/* Introductory Text */}
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Hi, I&apos;m Jerry 👋
+          Xin chao, I&apos;m Jerry 👋
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
-          I graduated from Nanyang Technological University with a strong
-          interest in combining AI and business to create impactful, real-world
-          solutions. I enjoy turning ideas into practical tools - whether
-          it&apos;s building smart chatbots, developing financial models, or
-          leading innovative tech projects. When I&apos;m not working,
-          you&apos;ll often find me exploring new places, going to the gym, or
-          reflecting over a good cup of coffee.
+          I graduated from Nanyang Technological University, Singapore. I like
+          mixing AI and business to build useful tools. I’m into analytics,
+          product management, and tech consulting, and I’m always chasing fresh
+          ideas to stay ahead in our fast-moving world. When I’m not working, I
+          love visiting new places, lifting weights at the gym, and enjoying a
+          good cup of Kopi C kosong ping ☕️ .
         </p>
 
         {/* Current Work Description or other highlights */}
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left">
-          I will join SimplifyNext as a Technology Analyst, where I will support
-          automation delivery and help clients streamline operations through
-          intelligent solutions. I’m passionate about solving real-world
-          problems at the intersection of data, design, and technology -
-          especially through applied AI and user-centric systems.
+          Soon I’ll join <strong>SimplifyNext</strong> as a Technology Analyst.
+          I’ll help create simple automations so people can focus on the fun
+          parts of their jobs. I enjoy solving real problems with data, design,
+          and technology - especially when AI can make the solution easy for
+          everyone.
         </p>
 
         {/* Quick Facts Section */}

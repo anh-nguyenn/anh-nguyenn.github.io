@@ -70,6 +70,25 @@ export default async function EducationItemPage(props: { params: pageParams }) {
           {eduItem.description}
         </p>
 
+        {/* Relevant Courses - Only for NTU */}
+        {eduItem.slug === "ntu-info-eng-media" && eduItem.relevantCourses && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+              Relevant Courses
+            </h2>
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300">
+                {eduItem.relevantCourses.map((course, index) => (
+                  <li key={index} className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
+                    {course}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
         {/* Personal Journey Story - Only for NTU */}
         {eduItem.slug === "ntu-info-eng-media" && (
           <div className="mb-12">
@@ -318,6 +337,10 @@ export default async function EducationItemPage(props: { params: pageParams }) {
               </h3>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>
+                  • <strong>Vietnamese Youth Alliance in Singapore:</strong>{" "}
+                  Head of Finance & External Relation (AY2021-2023)
+                </li>
+                <li>
                   • <strong>NTU ShARE Management Consulting Club:</strong>{" "}
                   Training Director (AY2023-2024)
                 </li>
@@ -353,21 +376,26 @@ export default async function EducationItemPage(props: { params: pageParams }) {
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-8 mb-8">
             <div className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                First time seeing snow, first time coming to Korea and met so
-                many friends. Thanks NTU for providing a meaningful exchange
-                program.
+                When I landed in Seoul it was 4 °C,already the coldest air I’d
+                ever felt. A week later the city dropped to –12 °C, sidewalks
+                dusted with snow. My face went numb, but I couldn’t stop
+                smiling. First time in Korea, first real winter. Everything felt
+                brand-new.
               </p>
+
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                This winter exchange at Korea University was more than just an
-                academic experience - it was a journey of firsts. From
-                experiencing my first snowfall to immersing myself in Korean
-                culture, every moment was filled with wonder and discovery.
+                The winter exchange at Korea University was more than lectures.
+                I learned to read the subway signs in Hangul, grabbed hotteok
+                from street stalls, and watched the lights bounce off the frozen
+                Han River. Each day brought a small adventure.
               </p>
+
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                The friendships I made during this short but intense program
-                will last a lifetime. We shared late-night study sessions,
-                explored Seoul together, and learned from each other&apos;s
-                diverse backgrounds and perspectives.
+                Best of all were the people. We pulled late night study
+                sessions, had snowball fights on the quad, and swapped stories
+                over bowls of ramen that steamed up our glasses. Those
+                friendships turned the freezing nights warm. Thanks, NTU, for a
+                winter I’ll remember forever.
               </p>
             </div>
           </div>

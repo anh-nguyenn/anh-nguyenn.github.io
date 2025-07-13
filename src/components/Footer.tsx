@@ -6,7 +6,7 @@ export default function Footer() {
     <footer
       className="mt-4 py-6 text-center text-sm text-gray-500 px-4 border-t
             dark:border-gray-800 border-gray-300 dark:bg-black"
-      id="footerPortfolio"
+      id="footerGlanceOfMyStory"
     >
       <div className="flex justify-center gap-6 mb-2 text-lg">
         <Link

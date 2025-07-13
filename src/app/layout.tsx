@@ -11,9 +11,9 @@ const gabarito = Gabarito({
 });
 
 export const metadata: Metadata = {
-  title: "Jerry Portfolio ",
+  title: "Jerry - A Glance of My Story",
   description:
-    "Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.",
+    "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
   icons: {
     icon: "/icons/favicon.ico",
     shortcut: "/icons/favicon.ico",
@@ -21,25 +21,25 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://nextjs-portofolio-website.vercel.app"),
   openGraph: {
-    title: "Next.js Developer Portfolio Template",
+    title: "Jerry - A Glance of My Story",
     description:
-      "Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.",
+      "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
     url: "https://nextjs-portofolio-website.vercel.app",
-    siteName: "Next.js Developer Portfolio Template",
+    siteName: "Jerry - A Glance of My Story",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Next.js Developer Portfolio Template",
+        alt: "Jerry - A Glance of My Story",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Developer Portfolio Template",
+    title: "Jerry - A Glance of My Story",
     description:
-      "Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.",
+      "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
     images: ["/og-image.png"],
   },
 };
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <title>My Developer Portfolio</title>
+        <title>A Glance of My Story</title>
       </head>
       <body
         className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
