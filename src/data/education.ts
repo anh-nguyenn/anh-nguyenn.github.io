@@ -3,8 +3,8 @@ const education = [
     slug: "ntu-info-eng-media",
     institution: "Nanyang Technological University (NTU)",
     degree: "B.Eng in Information Engineering & Media",
-    start: "2021",
-    end: "2025",
+    start: "Aug 2021",
+    end: "June 2025",
     description:
       "Graduated with Highest Distinction (First Class Honours). Specialized in Computing and Intelligent Systems.",
     location: "Singapore",

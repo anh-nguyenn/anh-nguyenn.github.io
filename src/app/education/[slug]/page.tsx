@@ -129,7 +129,6 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                       src="/admission-letter.png"
                       alt="NTU Admission Letter"
                       className="w-full h-auto rounded-lg object-cover"
-                      style={{ maxHeight: "320px" }}
                     />
                     <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                       My NTU Admission Letter – A Dream Come True
@@ -165,7 +164,6 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                       src="/first-ntu-class.jpg"
                       alt="First NTU Class"
                       className="w-full h-auto rounded-lg object-cover"
-                      style={{ maxHeight: "320px" }}
                     />
                     <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                       My First NTU Class – The Beginning of Everything
@@ -188,56 +186,56 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                     <img
                       src="/projects/peak.jpg"
                       alt="Hackathon Experience"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/loreal.jpg"
                       alt="Business Competition"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/ideasjam.png"
                       alt="ideasjam"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/ic2e.jpg"
                       alt="ic2e"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/bearingpoint.png"
                       alt="bearingpoint"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/developer-google.png"
                       alt="workshop"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/with-keppel-ceo.png"
                       alt="Keppel Work"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-md">
                     <img
                       src="/projects/fyp.jpg"
                       alt="Career Development"
-                      className="w-full h-24 object-cover rounded"
+                      className="w-full aspect-[4/3] object-cover rounded"
                     />
                   </div>
                 </div>
@@ -363,6 +361,23 @@ export default async function EducationItemPage(props: { params: pageParams }) {
               </ul>
             </div>
           </div>
+
+          {/* Thank You & NTU Degree Image */}
+          <div className="flex flex-col items-center mt-8">
+            <p className="text-lg text-center text-gray-800 dark:text-gray-300 font-semibold mb-4 max-w-2xl">
+              This degree is not just a piece of paper, it&apos;s a story of
+              growth, resilience, and gratitude for everyone who believed in me
+              along the way.
+            </p>
+            <img
+              src="/ntu/ntu-degree.png"
+              alt="NTU Degree Certificate"
+              className="w-full max-w-md h-auto rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
+            />
+            <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Official NTU Degree Certificate
+            </p>
+          </div>
         </div>
       )}
 
@@ -410,7 +425,7 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                 <img
                   src="/ku/first-snow.jpg"
                   alt="KU Campus"
-                  className="w-full h-32 object-cover rounded"
+                  className="w-full aspect-square object-cover rounded"
                 />
                 <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                   My First Snow
@@ -420,7 +435,7 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                 <img
                   src="/ku/ku-campus.jpg"
                   alt="KU Campus"
-                  className="w-full h-32 object-cover rounded"
+                  className="w-full aspect-square object-cover rounded"
                 />
                 <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                   KU Campus
@@ -430,7 +445,7 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                 <img
                   src="/ku/friends.jpg"
                   alt="KU Campus"
-                  className="w-full h-32 object-cover rounded"
+                  className="w-full aspect-square object-cover rounded"
                 />
                 <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                   New Friends
@@ -440,7 +455,7 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                 <img
                   src="/ku/grad.jpg"
                   alt="KU Campus"
-                  className="w-full h-32 object-cover rounded"
+                  className="w-full aspect-square object-cover rounded"
                 />
                 <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
                   KU Graduation
@@ -473,6 +488,18 @@ export default async function EducationItemPage(props: { params: pageParams }) {
                 <li>• Global Perspective Development</li>
               </ul>
             </div>
+          </div>
+
+          {/* KU Transcript Image */}
+          <div className="flex flex-col items-center mt-8">
+            <img
+              src="/ku/KU_Transcript.png"
+              alt="Korea University Transcript"
+              className="w-full max-w-md h-auto rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
+            />
+            <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Official Korea University Transcript
+            </p>
           </div>
         </div>
       )}

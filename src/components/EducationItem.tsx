@@ -13,7 +13,6 @@ interface EducationItemProps {
   end: string;
   description: string;
   location: string;
-  gpa?: string;
   achievements?: string[];
 }
 
@@ -28,7 +27,6 @@ export default function EducationItem({
   end,
   description,
   location,
-  gpa,
   achievements,
 }: EducationItemProps) {
   return (
@@ -75,18 +73,20 @@ export default function EducationItem({
             <FaMapMarkerAlt className="w-4 h-4 mr-1" />
             <span>{location}</span>
           </div>
-          {gpa && (
-            <div className="flex items-center">
-              <span className="hidden sm:inline mx-2">|</span>
-              <span className="font-medium text-green-600 dark:text-green-400">
-                GPA: {gpa}
-              </span>
-            </div>
-          )}
         </div>
 
         {/* Description */}
-        <p className="text-gray-700 dark:text-gray-300 mb-3">{description}</p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          {description
+            .split(/(Highest Distinction \(First Class Honours\))/g)
+            .map((part, idx) =>
+              part === "Highest Distinction (First Class Honours)" ? (
+                <b key={idx}>{part}</b>
+              ) : (
+                part
+              )
+            )}
+        </p>
 
         {/* Achievements */}
         {achievements && achievements.length > 0 && (

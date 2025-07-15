@@ -43,7 +43,7 @@ export default function Breadcrumbs() {
         {/* Initials on mobile */}
         <span className="block md:hidden">Jerry</span>
         {/* Full name on desktop */}
-        <span className="hidden md:inline">Jerry Anh Nguyen</span>
+        <span className="hidden md:inline">Jerry Nguyen Tuan Anh</span>
       </Link>
 
       {/* Crumbs part: show only on mobile, not on desktop */}
