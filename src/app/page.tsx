@@ -46,8 +46,8 @@ export default function Home() {
 
         {/* Current Work Description or other highlights */}
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left">
-          Soon I’m working at <strong>SimplifyNext</strong> as a Technology Analyst.
-          I’ll help create simple automations so people can focus on the fun
+          I’m working at <strong>SimplifyNext</strong> as a Technology Analyst.
+          I help create robotic process automations so people can focus on the fun
           parts of their jobs. I enjoy solving real problems with data, design,
           and technology - especially when AI can make the solution easy for
           everyone.
