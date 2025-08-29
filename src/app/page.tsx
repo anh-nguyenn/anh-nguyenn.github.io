@@ -15,8 +15,6 @@ import {
   FaLanguage,
   FaUniversity,
   FaBuilding,
-  FaTools,
-  FaVideo,
   FaDumbbell,
   FaFutbol,
 } from "react-icons/fa";
@@ -41,14 +39,13 @@ export default function Home() {
           Xin chao, I&apos;m Jerry 👋
         </h1>
        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
-  I graduated from Nanyang Technological University, Singapore, with a focus on Computing and Intelligent Systems. I enjoy designing technical solutions that solve real business problems, especially in areas like technology consulting, solution architecture, and analytics. I&apos;m always exploring new ideas and learning to keep up with today’s rapidly evolving tech landscape. Outside of work, I love discovering new places, lifting weights at the gym, and enjoying a good cup of Kopi C kosong ping ☕️.
+  I graduated from Nanyang Technological University, Singapore, with a focus on Computing and Intelligent Systems. I enjoy developing technical solutions that solve real business problems. I&apos;m always exploring new ideas and learning to keep up with today’s rapidly evolving tech landscape. Outside of work, I love discovering new places, lifting weights at the gym, and enjoying a good cup of Kopi C kosong ping ☕️.
 </p>
 
         {/* Current Work Description or other highlights */}
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left">
           I’m working at <strong>SimplifyNext</strong> as a Technology Analyst.
-          I help create robotic process automations so people can focus on the fun
-          parts of their jobs. I enjoy solving real problems with data, design,
+          I help build robotic process automations and applications that let people focus on the meaningful parts of their jobs. I enjoy solving real problems with data, design,
           and technology - especially when AI can make the solution easy for
           everyone.
         </p>
@@ -62,10 +59,7 @@ export default function Home() {
               { icon: FaBuilding, label: "SimplifyNext" },
               { icon: FaUniversity, label: "IEM Grad @ NTU" },
               { icon: FaMapMarkerAlt, label: "Singapore" },
-              //   { icon: FaBook, label: "Book Reviewer" },
               { icon: FaLanguage, label: "EN / VN" },
-              { icon: FaTools, label: "Technology Consulting" },
-              { icon: FaVideo, label: "Content Creator" },
               { icon: FaDumbbell, label: "Gym" },
               { icon: FaFutbol, label: "Football" },
             ].map((fact, i) => {

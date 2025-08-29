@@ -8,7 +8,7 @@ const education = [
     description:
       "Graduated with Highest Distinction (First Class Honours). Specialized in Computing and Intelligent Systems.",
     location: "Singapore",
-    gpa: "4.53/5.00",
+    gpa: ">4.5/5.0",
     achievements: [
       "Dean's List AY2024-2025",
       "NTU - A*STAR Final Year Project: Unifying LLMs with Knowledge Graphs for Reliable Chatbot Interactions",
