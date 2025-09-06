@@ -12,7 +12,7 @@ const work = [
   {
     slug: "NIE",
     company: "National Institute of Education (NIE)",
-    title: "Technology Analyst Intern",
+    title: "Software Engineer (Contract)",
     start: "May 2025",
     end: "Jul 2025",
     description:
