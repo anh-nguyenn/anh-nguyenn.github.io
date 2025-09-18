@@ -22,12 +22,12 @@ const work = [
   {
     slug: "BearingPoint",
     company: "BearingPoint",
-    title: "Technology & Consulting Intern",
+    title: "Technology Consulting Intern",
     start: "Aug 2024",
     end: "Feb 2025",
     description:
       "Developed GenAI-powered AML PoCs and AI solutions for banking clients across Europe and Asia.",
-    locations: ["Singapore", "Remote"],
+    locations: ["Singapore", "Hong Kong"],
   },
   {
     slug: "Keppel",
@@ -42,7 +42,7 @@ const work = [
   {
     slug: "IRAS",
     company: "Inland Revenue Authority of Singapore (IRAS)",
-    title: "System Analyst Intern",
+    title: "Data Engineer Intern",
     start: "May 2023",
     end: "Dec 2023",
     description:
