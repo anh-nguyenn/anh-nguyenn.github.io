@@ -7,7 +7,14 @@ const projects = [
       "A framework integrating Large Language Models with Knowledge Graphs to improve accuracy and explainability.",
     startDate: "2024-08",
     endDate: "2025-04",
-    techStack: ["Python", "LLMs", "Knowledge Graphs", "SPARQL"],
+    techStack: [
+      "Python",
+      "Java",
+      "Kafka",
+      "LLMs",
+      "Knowledge Graphs",
+      "SPARQL",
+    ],
   },
   {
     slug: "project-B",

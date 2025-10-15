@@ -38,16 +38,23 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
           Xin chao, I&apos;m Jerry 👋
         </h1>
-       <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
-  I graduated from Nanyang Technological University, Singapore, with a focus on Computing and Intelligent Systems. I enjoy developing technical solutions that solve real business problems. I&apos;m always exploring new ideas and learning to keep up with today’s rapidly evolving tech landscape. Outside of work, I love discovering new places, lifting weights at the gym, and enjoying a good cup of Kopi C kosong ping ☕️.
-</p>
+        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
+          I graduated from Nanyang Technological University, Singapore, with a
+          focus on Computing and Intelligent Systems. I enjoy developing
+          technical solutions that solve real business problems. I&apos;m always
+          exploring new ideas and learning to keep up with today’s rapidly
+          evolving tech landscape. Outside of work, I love discovering new
+          places, lifting weights at the gym, and enjoying a good cup of Kopi C
+          kosong ping ☕️.
+        </p>
 
         {/* Current Work Description or other highlights */}
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left">
           I’m working at <strong>SimplifyNext</strong> as a Technology Analyst.
-          I help build robotic process automations and applications that let people focus on the meaningful parts of their jobs. I enjoy solving real problems with data, design,
-          and technology - especially when AI can make the solution easy for
-          everyone.
+          I help build robotic process automations and applications that let
+          people focus on the meaningful parts of their jobs. I enjoy solving
+          real problems with data, design, and technology - especially when AI
+          can make the solution easy for everyone.
         </p>
 
         {/* Quick Facts Section */}
@@ -135,7 +142,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* Recent Projects */}
+      {/* University Project */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +151,7 @@ export default function Home() {
         className="mt-16"
       >
         <ViewAllHeader
-          title="Recent Projects"
+          title="University Project"
           pageUrl="/projects"
           itemCount={projects.length}
         />

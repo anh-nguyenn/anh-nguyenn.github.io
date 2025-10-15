@@ -3,10 +3,10 @@ const work = [
     slug: "SimplifyNext",
     company: "SimplifyNext",
     title: "Technology Analyst",
-    start: "Aug 2025",
+    start: "Jul 2025",
     end: "Present",
     description:
-      "Kicking off my journey at SimplifyNext to launch my technology consulting career.",
+      "Partnered with client subject matter experts to capture business requirements and translate them into robust technical solutions, ensuring alignment with operational goals. Built and deployed 8 robotic process automation using UiPath in the banking sector, covering reconciliation, validation, and calculation processes with advanced exception handling and production monitoring.",
     locations: ["Singapore"],
   },
   {
