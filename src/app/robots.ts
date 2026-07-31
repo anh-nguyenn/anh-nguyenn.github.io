@@ -1,5 +1,7 @@
 import type {MetadataRoute} from 'next'
 
+export const dynamic = 'force-static';
+
 /**
  * Generates a robots.txt file for the website.
  */
@@ -9,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://nextjs-portofolio-website.vercel.app/sitemap.xml',
+        sitemap: 'https://anh-nguyenn.github.io/jerry-nguyen-portfolio/sitemap.xml',
     }
 }
