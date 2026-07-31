@@ -65,7 +65,7 @@ export default function EducationItem({
           <div className="flex items-center">
             <FaCalendarAlt className="w-4 h-4 mr-1" />
             <span>
-              {start} – {end}
+              {start} --- {end}
             </span>
           </div>
           <div className="flex items-center">

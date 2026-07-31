@@ -1,15 +1,5 @@
 const education = [
   {
-    slug: "worldquant-university",
-    institution: "Worldquant University (US)",
-    degree: "Master of Science in Financial Engineering",
-    start: "Oct 2025",
-    end: "Present",
-    description: "Online part-time program in progress",
-    location: "United States",
-    relevantCourses: ["Financial Market"],
-  },
-  {
     slug: "ntu-info-eng-media",
     institution: "Nanyang Technological University (NTU)",
     degree: "B.Eng in Information Engineering & Media",

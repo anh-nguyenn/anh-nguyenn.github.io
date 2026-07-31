@@ -1,18 +1,28 @@
 const work = [
   {
+    slug: "GlobalFoundries",
+    company: "GlobalFoundries",
+    title: "Data Scientist",
+    start: "Aug 2026",
+    end: "Present",
+    description:
+      "Develop data science solutions for semiconductor manufacturing and operations.",
+    locations: ["Singapore"],
+  },
+  {
     slug: "SimplifyNext",
     company: "SimplifyNext",
     title: "Technology Analyst",
     start: "Jul 2025",
-    end: "Present",
+    end: "Aug 2026",
     description:
-      "Partnered with client subject matter experts to capture business requirements and translate them into robust technical solutions, ensuring alignment with operational goals. Built and deployed 8 robotic process automation using UiPath in the banking sector, covering reconciliation, validation, and calculation processes with advanced exception handling and production monitoring.",
+      "Worked with four major clients to deliver automation and AI solutions, from end-to-end design through development.",
     locations: ["Singapore"],
   },
   {
     slug: "NIE",
     company: "National Institute of Education (NIE)",
-    title: "Software Engineer (Contract)",
+    title: "AI Research Assistant",
     start: "May 2025",
     end: "Jul 2025",
     description:
@@ -22,7 +32,7 @@ const work = [
   {
     slug: "BearingPoint",
     company: "BearingPoint",
-    title: "Technology Consulting Intern",
+    title: "AI Engineer Intern",
     start: "Aug 2024",
     end: "Feb 2025",
     description:

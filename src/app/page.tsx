@@ -1,208 +1,116 @@
-"use client";
-
-// import blog from "@/data/blog";
-import projects from "@/data/projects";
-import work from "@/data/work";
 import education from "@/data/education";
-import WorkItem from "@/components/WorkItem";
-import EducationItem from "@/components/EducationItem";
-import ProjectTile from "@/components/ProjectTile";
-// import BlogPost from "@/components/BlogPost";
-import ViewAllHeader from "@/components/ViewAllHeader";
-import { motion } from "framer-motion";
-import {
-  FaMapMarkerAlt,
-  FaLanguage,
-  FaUniversity,
-  FaBuilding,
-  FaDumbbell,
-  FaFutbol,
-} from "react-icons/fa";
+import work from "@/data/work";
 
-/**
- * Home component that serves as the main landing page for the glance of my story.
- * This is accessed at the root URL ("/") of the application.
- */
+const facts = [
+  ["Current role", "Data Scientist"],
+  ["Focus", "Applied ML & analytics"],
+  ["Based in", "Singapore"],
+];
+
+const workSummaries: Record<string, string> = {
+  GlobalFoundries:
+    "Applying data science to semiconductor manufacturing and operations.",
+  SimplifyNext:
+    "Delivered end-to-end automation and AI solutions for four major clients.",
+  NIE: "Built ML pipelines and analytics tools that cut review effort by 70%.",
+  BearingPoint:
+    "Developed GenAI and AML prototypes for banking clients in Europe and Asia.",
+  Keppel:
+    "Built analytics dashboards across four countries, improving satisfaction by 20%.",
+  IRAS:
+    "Engineered datasets exceeding one billion rows and improved system speed by 8x.",
+};
+
+const educationSummaries: Record<string, string> = {
+  "ntu-info-eng-media":
+    "Highest Distinction, Dean's List - Computing and Intelligent Systems. Thesis: Unifying Large Language Models with Knowledge for Reliable Chatbot Interaction.",
+  "ku-exchange": "Data Analytics - A+.",
+};
+
 export default function Home() {
   return (
-    <section className="px-4 max-w-4xl mx-auto">
-      {/* Intro Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="text-center mt-2"
-      >
-        {/* Introductory Text */}
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Xin chao, I&apos;m Jerry 👋
-        </h1>
-        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
-          I graduated from Nanyang Technological University, Singapore, with a
-          focus on Computing and Intelligent Systems. I enjoy developing
-          technical solutions that solve real business problems. I&apos;m always
-          exploring new ideas and learning to keep up with today’s rapidly
-          evolving tech landscape. Outside of work, I love discovering new
-          places, lifting weights at the gym, and enjoying a good cup of Kopi C
-          kosong ping ☕️.
-        </p>
-
-        {/* Current Work Description or other highlights */}
-        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left">
-          I’m working at <strong>SimplifyNext</strong> as a Technology Analyst.
-          I help build robotic process automations and applications that let
-          people focus on the meaningful parts of their jobs. I enjoy solving
-          real problems with data, design, and technology - especially when AI
-          can make the solution easy for everyone.
-        </p>
-
-        {/* Quick Facts Section */}
-        <div className="mt-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Quick & Fun Facts</h2>
-
-          <div className="flex flex-wrap justify-center gap-3 px-4 max-w-4xl mx-auto">
-            {[
-              { icon: FaBuilding, label: "SimplifyNext" },
-              { icon: FaUniversity, label: "IEM Grad @ NTU" },
-              { icon: FaMapMarkerAlt, label: "Singapore" },
-              { icon: FaLanguage, label: "EN / VN" },
-              { icon: FaDumbbell, label: "Gym" },
-              { icon: FaFutbol, label: "Football" },
-            ].map((fact, i) => {
-              const Icon = fact.icon;
-              return (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800
-                                    text-sm text-gray-700 dark:text-gray-300 rounded-full shadow-md transition"
-                >
-                  <Icon className="text-blue-500 dark:text-blue-400 text-base" />
-                  <span>{fact.label}</span>
-                </div>
-              );
-            })}
+    <>
+      <section className="portfolio-hero container" aria-labelledby="intro-title">
+        <p className="eyebrow">Data Scientist at GlobalFoundries</p>
+        <h1 id="intro-title">Turning complex data into practical decisions.</h1>
+        <div className="hero-copy">
+          <p>
+            I&apos;m Jerry Nguyen, a Data Scientist at{" "}
+            <strong>GlobalFoundries</strong>, focused on applied machine
+            learning, analytics, and operational impact.
+          </p>
+          <div className="hero-actions">
+            <a className="button button--primary" href="#work">
+              View experience
+            </a>
+            <a className="text-link" href="mailto:nguyentuananh.kmf@gmail.com">
+              Get in touch <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
-      </motion.div>
+      </section>
 
-      {/* Education Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="mt-16"
-      >
-        <ViewAllHeader
-          title="Education"
-          pageUrl="/education"
-          itemCount={education.length}
-        />
-        <div className="grid gap-4">
-          {education.map((edu, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-              <EducationItem {...edu} />
-            </motion.div>
+      <aside className="facts container" aria-label="Professional summary">
+        {facts.map(([label, value]) => (
+          <div className="fact" key={label}>
+            <span>{label}</span>
+            <strong>{value}</strong>
+          </div>
+        ))}
+      </aside>
+
+      <section className="portfolio-section container" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <p className="eyebrow">01 / Experience</p>
+          <h2 id="work-title">Work experience</h2>
+        </div>
+        <div className="experience-list">
+          {work.map((job, index) => (
+            <article className="experience-row" key={job.slug}>
+              <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{job.title}</h3>
+                <p className="item-organization">{job.company}</p>
+                <p className="item-description">{workSummaries[job.slug]}</p>
+              </div>
+              <div className="item-meta">
+                <span>{job.start} - {job.end}</span>
+                <span>{job.locations?.join(" / ")}</span>
+              </div>
+            </article>
           ))}
         </div>
-      </motion.div>
+      </section>
 
-      {/* Recent Work */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="mt-16"
-      >
-        <ViewAllHeader
-          title="Work Experience"
-          pageUrl="/work"
-          itemCount={work.length}
-        />
-        <div className="grid gap-4">
-          {work.slice(0, 3).map((job, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-              <WorkItem {...job} />
-            </motion.div>
+      <section className="portfolio-section container" id="education" aria-labelledby="education-title">
+        <div className="section-heading">
+          <p className="eyebrow">02 / Education</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <div className="education-list">
+          {education.map((item) => (
+            <article className="education-row" key={item.slug}>
+              <div>
+                <p className="item-meta">{item.start} - {item.end}</p>
+                <h3>{item.degree}</h3>
+                <p className="item-organization">{item.institution}</p>
+              </div>
+              <div>
+                <p>{educationSummaries[item.slug]}</p>
+              </div>
+            </article>
           ))}
         </div>
-      </motion.div>
+      </section>
 
-      {/* University Project */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="mt-16"
-      >
-        <ViewAllHeader
-          title="University Project"
-          pageUrl="/projects"
-          itemCount={projects.length}
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-          {projects.slice(0, 4).map((proj) => (
-            <motion.div
-              key={proj.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-              <ProjectTile key={proj.slug} {...proj} />
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Recent Blog Posts */}
-      {/* 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="mt-16 mb-12"
-      >
-        <ViewAllHeader
-          title="Recent Blog Posts"
-          pageUrl="/blog"
-          itemCount={blog.length}
-        />
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {blog
-            .slice()
-            .sort((a, b) => getTimeSafe(b.date) - getTimeSafe(a.date))
-            .slice(0, 3)
-            .map((post) => (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-              >
-                <BlogPost {...post} />
-              </motion.div>
-            ))}
-        </div>
-      </motion.div>
-      */}
-    </section>
+      <section className="contact-section container" id="contact" aria-labelledby="contact-title">
+        <p className="eyebrow">03 / Contact</p>
+        <h2 id="contact-title">Let&apos;s connect.</h2>
+        <p>Data science, applied AI, or meaningful technical work.</p>
+        <a className="button button--primary" href="mailto:nguyentuananh.kmf@gmail.com">
+          Send me an email
+        </a>
+      </section>
+    </>
   );
 }

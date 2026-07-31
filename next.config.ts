@@ -12,7 +12,9 @@ const withMDX = createMDX({
 })
 
 const nextConfig: NextConfig = {
-    /* config options here */
+    // Keep development and production artifacts separate. Running `next build`
+    // must not overwrite chunks used by an active `next dev` server.
+    distDir: process.env.NODE_ENV === "development" ? ".next" : ".next-build",
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     transpilePackages: ["next-mdx-remote"]

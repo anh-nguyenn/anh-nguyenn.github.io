@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Gabarito } from "next/font/google";
+import { Instrument_Serif, Inter } from "next/font/google";
 import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const gabarito = Gabarito({
-  variable: "--font-gabarito",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "Jerry - A Glance of My Story",
+  title: "Jerry Nguyen - Data Scientist",
   description:
-    "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
+    "Data scientist focused on applied machine learning, analytics, and operational impact.",
   icons: {
     icon: "/icons/favicon.ico",
     shortcut: "/icons/favicon.ico",
@@ -21,71 +27,39 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://nextjs-portofolio-website.vercel.app"),
   openGraph: {
-    title: "Jerry - A Glance of My Story",
+    title: "Jerry Nguyen - Data Scientist",
     description:
-      "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
+      "Data scientist focused on applied machine learning, analytics, and operational impact.",
     url: "https://nextjs-portofolio-website.vercel.app",
-    siteName: "Jerry - A Glance of My Story",
+    siteName: "Jerry Nguyen",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jerry - A Glance of My Story",
+        alt: "Jerry Nguyen - Data Scientist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jerry - A Glance of My Story",
+    title: "Jerry Nguyen - Data Scientist",
     description:
-      "A glance of my story - showcasing my journey, projects, and experiences built with Next.js, TypeScript, and TailwindCSS.",
+      "Data scientist focused on applied machine learning, analytics, and operational impact.",
     images: ["/og-image.png"],
   },
 };
-
-// This script initializes the theme based on user preference or saved settings
-// And is used to avoid FOUC (Flash of Unstyled Content) on the initial load
-const themeInitScript = `
-(function() {
-  try {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-    document.documentElement.classList.add(theme);
-    if (theme === 'dark') document.documentElement.classList.add('dark');
-  } catch(e) {}
-})();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${gabarito.className} ${gabarito.variable}`}
+      className={`${inter.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <title>A Glance of My Story</title>
-      </head>
-      <body
-        className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
-      >
-        {/* Dot Background Layer */}
-        <div
-          className={`
-            fixed inset-0 -z-10
-            bg-[radial-gradient(circle,_#d1d5db_1px,_transparent_1px)]
-            dark:bg-[radial-gradient(circle,_#3f3f46_1px,_transparent_1px)]
-            bg-[length:30px_30px]
-            [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]
-          `}
-        />
-
+      <body>
         <Header />
-        <main className="flex-grow container mx-auto px-4 py-6">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
