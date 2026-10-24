@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://anh-nguyenn.github.io/jerry-nguyen-portfolio/',
+            url: 'https://anh-nguyenn.github.io/',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1

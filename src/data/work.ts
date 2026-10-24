@@ -12,7 +12,7 @@ const work = [
   {
     slug: "SimplifyNext",
     company: "SimplifyNext",
-    title: "Technology Analyst",
+    title: "Technology Consulting Analyst",
     start: "Jul 2025",
     end: "Aug 2026",
     description:
@@ -24,7 +24,7 @@ const work = [
     company: "National Institute of Education (NIE)",
     title: "AI Research Assistant",
     start: "May 2025",
-    end: "Jul 2025",
+    end: "Aug 2025",
     description:
       "Built ML pipelines and analytics chatbots to analyze lectures, cutting review efforts by 70%.",
     locations: ["Singapore"],
@@ -42,7 +42,7 @@ const work = [
   {
     slug: "Keppel",
     company: "Keppel Ltd.",
-    title: "Digital Transformation & CX Intern",
+    title: "CX Intern",
     start: "May 2024",
     end: "Aug 2024",
     description:

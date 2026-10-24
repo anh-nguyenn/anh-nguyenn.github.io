@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://anh-nguyenn.github.io/jerry-nguyen-portfolio/sitemap.xml',
+        sitemap: 'https://anh-nguyenn.github.io/sitemap.xml',
     }
 }

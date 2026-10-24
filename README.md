@@ -3,7 +3,7 @@
 A concise, single-page portfolio focused on my experience in data science,
 applied machine learning, analytics, and AI.
 
-**Live site:** [anh-nguyenn.github.io/jerry-nguyen-portfolio](https://anh-nguyenn.github.io/jerry-nguyen-portfolio/)
+**Live site:** [anh-nguyenn.github.io](https://anh-nguyenn.github.io/)
 
 ## About
 

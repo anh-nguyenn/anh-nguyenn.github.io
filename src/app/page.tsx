@@ -1,4 +1,6 @@
+import awards from "@/data/awards";
 import education from "@/data/education";
+import volunteering from "@/data/volunteering";
 import work from "@/data/work";
 
 const facts = [
@@ -103,8 +105,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="portfolio-section container" id="recognition" aria-labelledby="recognition-title">
+        <div className="section-heading">
+          <p className="eyebrow">03 / Recognition</p>
+          <h2 id="recognition-title">Honors &amp; awards</h2>
+        </div>
+        <ul className="award-list">
+          {awards.map((award) => (
+            <li className="award-row" key={award.title}>
+              <span className="award-year">{award.date}</span>
+              <div>
+                <h3>{award.title}</h3>
+                <p className="item-organization">{award.issuer}</p>
+                {award.detail && <p className="award-detail">{award.detail}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="portfolio-section container" id="service" aria-labelledby="service-title">
+        <div className="section-heading">
+          <p className="eyebrow">04 / Service</p>
+          <h2 id="service-title">Volunteering</h2>
+        </div>
+        <div className="experience-list">
+          {volunteering.map((role) => (
+            <article className="education-row" key={role.slug}>
+              <div>
+                <p className="item-meta">{role.start} - {role.end}</p>
+                <h3>{role.role}</h3>
+                <p className="item-organization">{role.organization}</p>
+              </div>
+              <div>
+                <p>{role.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="contact-section container" id="contact" aria-labelledby="contact-title">
-        <p className="eyebrow">03 / Contact</p>
+        <p className="eyebrow">05 / Contact</p>
         <h2 id="contact-title">Let&apos;s connect.</h2>
         <p>Data science, applied AI, or meaningful technical work.</p>
         <a className="button button--primary" href="mailto:nguyentuananh.kmf@gmail.com">

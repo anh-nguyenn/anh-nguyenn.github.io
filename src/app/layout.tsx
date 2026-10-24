@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     shortcut: "/icons/favicon.ico",
     apple: "/icons/favicon.ico",
   },
-  metadataBase: new URL("https://anh-nguyenn.github.io/jerry-nguyen-portfolio/"),
+  metadataBase: new URL("https://anh-nguyenn.github.io/"),
   openGraph: {
     title: "Jerry Nguyen - Data Scientist",
     description:
       "Data scientist focused on applied machine learning, analytics, and operational impact.",
-    url: "https://anh-nguyenn.github.io/jerry-nguyen-portfolio/",
+    url: "https://anh-nguyenn.github.io/",
     siteName: "Jerry Nguyen",
     images: [
       {

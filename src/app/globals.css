@@ -140,6 +140,18 @@ a:hover { color: var(--accent); }
 }
 .education-row p { margin-bottom: 10px; }
 .education-row ul { margin: 12px 0 0; padding-left: 18px; color: var(--text-secondary); font-size: .88rem; }
+.award-list { margin: 0; padding: 0; border-top: 1px solid var(--border-strong); list-style: none; }
+.award-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.award-row h3 { margin-bottom: 3px; font-size: 1.32rem; }
+.award-row .item-organization { margin-bottom: 8px; font-size: .84rem; }
+.award-year { padding-top: 6px; color: var(--text-muted); font-family: ui-monospace, monospace; font-size: .72rem; }
+.award-detail { max-width: 720px; margin-bottom: 0; font-size: .92rem; }
 .contact-section { padding-block: clamp(64px, 7vw, 96px); text-align: center; }
 .contact-section h2 { max-width: 760px; margin-inline: auto; }
 .contact-section > p:not(.eyebrow) { max-width: 540px; margin: 0 auto 30px; font-size: 1.08rem; }
@@ -169,6 +181,8 @@ main > .max-w-4xl, main > section.max-w-4xl { padding-top: 64px; padding-bottom:
   .experience-row .item-meta { grid-column: 2; grid-row: 2; margin-top: -12px; }
   .education-row { grid-template-columns: 1fr; gap: 20px; }
   .education-row > div:nth-child(2) { grid-column: 1; }
+  .award-row { grid-template-columns: 1fr; gap: 6px; padding-block: 20px; }
+  .award-year { padding-top: 0; }
 }
 
 @media (max-width: 480px) {
