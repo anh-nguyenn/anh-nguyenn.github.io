@@ -3,11 +3,29 @@ import education from "@/data/education";
 import volunteering from "@/data/volunteering";
 import work from "@/data/work";
 
-const facts = [
-  ["Current role", "Data Scientist"],
-  ["Focus", "Applied ML & analytics"],
-  ["Based in", "Singapore"],
-];
+const WAFER_SIZE = 19;
+
+type Category = "ml" | "ai" | "data" | "edu";
+
+const siteSpecs: Record<
+  string,
+  { abbr: string; code: string; coord: string; short: string; category: Category; r: number; c: number; w: number; h: number }
+> = {
+  GlobalFoundries: { abbr: "Global", code: "01", coord: "R6C9", short: "GlobalFoundries", category: "ml", r: 6, c: 9, w: 3, h: 3 },
+  SimplifyNext: { abbr: "Simplify", code: "02", coord: "R10C12", short: "SimplifyNext", category: "ai", r: 10, c: 12, w: 3, h: 2 },
+  NIE: { abbr: "NIE", code: "03", coord: "R4C12", short: "NIE", category: "ai", r: 4, c: 12, w: 2, h: 2 },
+  BearingPoint: { abbr: "Bearing", code: "04", coord: "R12C8", short: "BearingPoint", category: "ai", r: 12, c: 8, w: 3, h: 2 },
+  Keppel: { abbr: "Keppel", code: "05", coord: "R9C4", short: "Keppel", category: "ai", r: 9, c: 4, w: 2, h: 2 },
+  IRAS: { abbr: "IRAS", code: "06", coord: "R6C4", short: "IRAS", category: "data", r: 6, c: 4, w: 2, h: 2 },
+};
+
+const eduSpecs: Record<
+  string,
+  { abbr: string; code: string; coord: string; short: string; r: number; c: number; w: number; h: number }
+> = {
+  "ntu-info-eng-media": { abbr: "NTU", code: "07", coord: "R13C13", short: "NTU", r: 13, c: 13, w: 3, h: 3 },
+  "ku-exchange": { abbr: "KU", code: "08", coord: "R4C5", short: "Korea", r: 4, c: 5, w: 2, h: 2 },
+};
 
 const workSummaries: Record<string, string> = {
   GlobalFoundries:
@@ -25,133 +43,265 @@ const workSummaries: Record<string, string> = {
 
 const educationSummaries: Record<string, string> = {
   "ntu-info-eng-media":
-    "Highest Distinction, Dean's List - Computing and Intelligent Systems. Thesis: Unifying Large Language Models with Knowledge for Reliable Chatbot Interaction.",
-  "ku-exchange": "Data Analytics - A+.",
+    "Highest Distinction and Dean's List. Thesis: unifying LLMs with knowledge graphs for reliable chatbot interaction.",
+  "ku-exchange": "Data Analytics coursework, graded A+.",
 };
+
+const measurements = [
+  { value: "1B+", label: "Rows transformed", source: "IRAS" },
+  { value: "8x", label: "System speed", source: "IRAS" },
+  { value: "70%", label: "Review effort removed", source: "NIE" },
+  { value: "20%", label: "Satisfaction gain", source: "Keppel" },
+];
+
+const legend: { category: Category; label: string }[] = [
+  { category: "ml", label: "Applied ML" },
+  { category: "ai", label: "AI & automation" },
+  { category: "data", label: "Data engineering" },
+  { category: "edu", label: "Education" },
+];
+
+const waferCells = Array.from({ length: WAFER_SIZE * WAFER_SIZE }, (_, index) => index);
 
 export default function Home() {
   return (
     <>
-      <section className="portfolio-hero container" aria-labelledby="intro-title">
-        <p className="eyebrow">Data Scientist at GlobalFoundries</p>
-        <h1 id="intro-title">Turning complex data into practical decisions.</h1>
-        <div className="hero-copy">
-          <p>
-            I&apos;m Jerry Nguyen, a Data Scientist at{" "}
-            <strong>GlobalFoundries</strong>, focused on applied machine
-            learning, analytics, and operational impact.
+      <section className="hero container" aria-labelledby="intro-title">
+        <div className="hero-wafer">
+          <div className="wafer-meta" aria-hidden="true">
+            <span>LOT JN-2026</span>
+            <span>{WAFER_SIZE} × {WAFER_SIZE} / {WAFER_SIZE * WAFER_SIZE} DIES</span>
+          </div>
+          <div className="wafer-frame">
+            <div className="wafer" role="group" aria-label="Wafer map of roles and qualifications">
+              {waferCells.map((cell) => (
+                <span className="die-cell" key={cell} aria-hidden="true" />
+              ))}
+
+              {work.map((job) => {
+                const spec = siteSpecs[job.slug];
+                return (
+                  <a
+                    className="site-die"
+                    data-category={spec.category}
+                    key={job.slug}
+                    href={`#${job.slug}`}
+                    style={{
+                      gridRow: `${spec.r} / span ${spec.h}`,
+                      gridColumn: `${spec.c} / span ${spec.w}`,
+                    }}
+                    aria-label={`Site ${spec.code}, ${job.company}, ${job.title}, ${job.start} to ${job.end}. Jump to the record.`}
+                    title={`${spec.coord} · ${job.company}`}
+                  >
+                    <span className="site-code">{spec.code}</span>
+                    <span className="site-name" data-abbr={spec.abbr}>{spec.short}</span>
+                  </a>
+                );
+              })}
+
+              {education.map((item) => {
+                const spec = eduSpecs[item.slug];
+                return (
+                  <a
+                    className="site-die"
+                    data-category="edu"
+                    key={item.slug}
+                    href={`#${item.slug}`}
+                    style={{
+                      gridRow: `${spec.r} / span ${spec.h}`,
+                      gridColumn: `${spec.c} / span ${spec.w}`,
+                    }}
+                    aria-label={`Site ${spec.code}, ${item.institution}, ${item.degree}. Jump to the record.`}
+                    title={`${spec.coord} · ${item.institution}`}
+                  >
+                    <span className="site-code">{spec.code}</span>
+                    <span className="site-name" data-abbr={spec.abbr}>{spec.short}</span>
+                  </a>
+                );
+              })}
+
+              <span className="wafer-notch" aria-hidden="true" />
+              <span className="wafer-scan" aria-hidden="true" />
+            </div>
+          </div>
+
+          <ul className="legend" aria-label="Die categories">
+            {legend.map((item) => (
+              <li key={item.category} data-category={item.category}>
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="hero-record">
+          <h1 id="intro-title">Jerry<br />Nguyen</h1>
+          <p className="positioning">
+            Data scientist at <strong>GlobalFoundries</strong>, building systems
+            for semiconductor operations and measuring whether they work better
+            after.
           </p>
+
+          <dl className="measurements" aria-label="Selected measured outcomes">
+            {measurements.map((item) => (
+              <div className="measurement" key={item.label}>
+                <dt>{item.value}</dt>
+                <dd>
+                  {item.label}
+                  <span>{item.source}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+
           <div className="hero-actions">
-            <a className="button button--primary" href="#work">
-              View experience
+            <a className="button" href="mailto:nguyentuananh.kmf@gmail.com">
+              Email me
             </a>
-            <a className="text-link" href="mailto:nguyentuananh.kmf@gmail.com">
-              Get in touch <span aria-hidden="true">↗</span>
+            <a className="link" href="#record">
+              View the record
             </a>
           </div>
         </div>
       </section>
 
-      <aside className="facts container" aria-label="Professional summary">
-        {facts.map(([label, value]) => (
-          <div className="fact" key={label}>
-            <span>{label}</span>
-            <strong>{value}</strong>
-          </div>
-        ))}
-      </aside>
-
-      <section className="portfolio-section container" id="work" aria-labelledby="work-title">
-        <div className="section-heading">
-          <p className="eyebrow">01 / Experience</p>
-          <h2 id="work-title">Work experience</h2>
+      <section className="log container" id="record" aria-labelledby="record-title">
+        <div className="log-head">
+          <h2 id="record-title">Process record</h2>
+          <p className="log-code">LOT 01 / {work.length} SITES</p>
         </div>
-        <div className="experience-list">
-          {work.map((job, index) => (
-            <article className="experience-row" key={job.slug}>
-              <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{job.title}</h3>
-                <p className="item-organization">{job.company}</p>
-                <p className="item-description">{workSummaries[job.slug]}</p>
-              </div>
-              <div className="item-meta">
-                <span>{job.start} - {job.end}</span>
-                <span>{job.locations?.join(" / ")}</span>
-              </div>
-            </article>
-          ))}
+
+        <div className="record-list">
+          {work.map((job) => {
+            const spec = siteSpecs[job.slug];
+            return (
+              <article
+                className="record"
+                id={job.slug}
+                key={job.slug}
+                aria-labelledby={`${job.slug}-title`}
+              >
+                <div className="record-site" aria-hidden="true">
+                  <span className="record-number">{spec.code}</span>
+                  <span className="record-coord">{spec.coord}</span>
+                  <span className="record-tick" data-category={spec.category} />
+                </div>
+                <div className="record-main">
+                  <h3 id={`${job.slug}-title`}>{job.title}</h3>
+                  <p className="record-org">{job.company}</p>
+                  <p className="record-outcome">{workSummaries[job.slug]}</p>
+                </div>
+                <div className="record-meta">
+                  <span>{job.start} — {job.end}</span>
+                  <span>{job.locations?.join(" / ")}</span>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      <section className="portfolio-section container" id="education" aria-labelledby="education-title">
-        <div className="section-heading">
-          <p className="eyebrow">02 / Education</p>
-          <h2 id="education-title">Education</h2>
+      <section className="log container" id="qualifications" aria-labelledby="qualifications-title">
+        <div className="log-head">
+          <h2 id="qualifications-title">Qualification record</h2>
+          <p className="log-code">LOT 02 / {education.length} SITES</p>
         </div>
-        <div className="education-list">
-          {education.map((item) => (
-            <article className="education-row" key={item.slug}>
-              <div>
-                <p className="item-meta">{item.start} - {item.end}</p>
-                <h3>{item.degree}</h3>
-                <p className="item-organization">{item.institution}</p>
-              </div>
-              <div>
-                <p>{educationSummaries[item.slug]}</p>
-              </div>
-            </article>
-          ))}
+
+        <div className="record-list">
+          {education.map((item) => {
+            const spec = eduSpecs[item.slug];
+            return (
+              <article
+                className="record"
+                id={item.slug}
+                key={item.slug}
+                aria-labelledby={`${item.slug}-title`}
+              >
+                <div className="record-site" aria-hidden="true">
+                  <span className="record-number">{spec.code}</span>
+                  <span className="record-coord">{spec.coord}</span>
+                  <span className="record-tick" data-category="edu" />
+                </div>
+                <div className="record-main">
+                  <h3 id={`${item.slug}-title`}>{item.degree}</h3>
+                  <p className="record-org">{item.institution}</p>
+                  <p className="record-outcome">{educationSummaries[item.slug]}</p>
+                </div>
+                <div className="record-meta">
+                  <span>{item.start} — {item.end}</span>
+                  <span>{item.location}</span>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      <section className="portfolio-section container" id="recognition" aria-labelledby="recognition-title">
-        <div className="section-heading">
-          <p className="eyebrow">03 / Recognition</p>
-          <h2 id="recognition-title">Honors &amp; awards</h2>
+      <section className="log container" id="recognition" aria-labelledby="recognition-title">
+        <div className="log-head">
+          <h2 id="recognition-title">Inspection log</h2>
+          <p className="log-code">LOT 03 / {awards.length} PASSES</p>
         </div>
-        <ul className="award-list">
+
+        <div className="award-list">
           {awards.map((award) => (
-            <li className="award-row" key={award.title}>
-              <span className="award-year">{award.date}</span>
+            <article className="award" key={award.title}>
+              <p className="award-date">{award.date}</p>
               <div>
                 <h3>{award.title}</h3>
-                <p className="item-organization">{award.issuer}</p>
-                {award.detail && <p className="award-detail">{award.detail}</p>}
+                <p className="record-org">{award.issuer}</p>
               </div>
-            </li>
+              <p className="award-detail">{award.detail ?? "—"}</p>
+            </article>
           ))}
-        </ul>
+        </div>
       </section>
 
-      <section className="portfolio-section container" id="service" aria-labelledby="service-title">
-        <div className="section-heading">
-          <p className="eyebrow">04 / Service</p>
-          <h2 id="service-title">Volunteering</h2>
+      <section className="log container" id="service" aria-labelledby="service-title">
+        <div className="log-head">
+          <h2 id="service-title">Service log</h2>
+          <p className="log-code">LOT 04 / {volunteering.length} SITES</p>
         </div>
-        <div className="experience-list">
+
+        <div className="record-list">
           {volunteering.map((role) => (
-            <article className="education-row" key={role.slug}>
-              <div>
-                <p className="item-meta">{role.start} - {role.end}</p>
-                <h3>{role.role}</h3>
-                <p className="item-organization">{role.organization}</p>
+            <article className="record record--compact" key={role.slug} aria-labelledby={`${role.slug}-title`}>
+              <div className="record-main">
+                <h3 id={`${role.slug}-title`}>{role.role}</h3>
+                <p className="record-org">{role.organization}</p>
+                <p className="record-outcome">{role.description}</p>
               </div>
-              <div>
-                <p>{role.description}</p>
+              <div className="record-meta">
+                <span>{role.start} — {role.end}</span>
+                <span>Singapore</span>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="contact-section container" id="contact" aria-labelledby="contact-title">
-        <p className="eyebrow">05 / Contact</p>
-        <h2 id="contact-title">Let&apos;s connect.</h2>
-        <p>Data science, applied AI, or meaningful technical work.</p>
-        <a className="button button--primary" href="mailto:nguyentuananh.kmf@gmail.com">
-          Send me an email
-        </a>
+      <section className="contact" id="contact" aria-labelledby="contact-title">
+        <div className="container contact-inner">
+          <div>
+            <h2 id="contact-title">Start a conversation.</h2>
+            <p>
+              Data science, applied AI, or operational work worth measuring.
+            </p>
+          </div>
+          <div className="contact-actions">
+            <a className="button" href="mailto:nguyentuananh.kmf@gmail.com">
+              nguyentuananh.kmf@gmail.com
+            </a>
+            <div className="contact-links">
+              <a className="link" href="https://www.linkedin.com/in/jerrynguyentuananh/" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a className="link" href="https://github.com/jerrynguyentuananh" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

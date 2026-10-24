@@ -2,14 +2,15 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="site-header">
-      <div className="site-header__inner container">
-        <Link className="site-logo" href="/" aria-label="Jerry Nguyen Tuan Anh, home">
-          Jerry Nguyen
+    <header className="status-bar">
+      <div className="status-inner container">
+        <Link className="brand" href="/" aria-label="Jerry Nguyen, home">
+          JN<span aria-hidden="true">/</span>WAFER
         </Link>
+        <p className="status-line">Applied ML · Analytics · Operations</p>
         <nav aria-label="Primary navigation">
-          <Link href="/#work">Work</Link>
-          <Link href="/#education">Education</Link>
+          <Link href="/#record">Record</Link>
+          <Link href="/#recognition">Inspection</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
       </div>
