@@ -6,7 +6,7 @@ const work = [
     start: "Aug 2026",
     end: "Present",
     description:
-      "Develop data science solutions for semiconductor manufacturing and operations.",
+      "Build AI and data science systems for semiconductor manufacturing and operations.",
     locations: ["Singapore"],
   },
   {
@@ -36,7 +36,7 @@ const work = [
     start: "Aug 2024",
     end: "Feb 2025",
     description:
-      "Developed GenAI-powered AML PoCs and AI solutions for banking clients across Europe and Asia.",
+      "Delivered GenAI-powered AML solutions for banking clients across Europe and Asia.",
     locations: ["Singapore", "Hong Kong"],
   },
   {
@@ -56,7 +56,7 @@ const work = [
     start: "May 2023",
     end: "Dec 2023",
     description:
-      "Handled data transformation on 1B+ rows; improved system speed 8x and efficiency by 15%.",
+      "Engineered national-scale tax data pipelines, making core queries 8x faster and raising processing efficiency by 15%.",
     locations: ["Singapore"],
   },
 ];

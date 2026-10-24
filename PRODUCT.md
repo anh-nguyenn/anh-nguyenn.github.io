@@ -42,7 +42,7 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 
 ## Evidence on Hand
 
-- Six roles in `src/data/work.ts`: GlobalFoundries, SimplifyNext, NIE, BearingPoint, Keppel, and IRAS, with dates, locations, and outcome metrics (1B+ rows, 8x speed, 70% review reduction, 20% satisfaction gain, four major clients).
+- Six roles in `src/data/work.ts`: GlobalFoundries, SimplifyNext, NIE, BearingPoint, Keppel, and IRAS, with dates, locations, and outcome metrics (8x query speed, 15% efficiency gain, 70% review reduction, 20% satisfaction gain, four major clients).
 - Two education entries in `src/data/education.ts`: NTU B.Eng in Information Engineering & Media (Highest Distinction, Dean's List) and a Korea University winter exchange (A+).
 - Six project entries in `src/data/projects.ts` with images under `public/projects/`.
 - Supporting PDFs under `public/pdf/` and photos under `public/ntu/`, `public/ku/`, and `public/`.

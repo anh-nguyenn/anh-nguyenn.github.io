@@ -29,16 +29,16 @@ const eduSpecs: Record<
 
 const workSummaries: Record<string, string> = {
   GlobalFoundries:
-    "Applying data science to semiconductor manufacturing and operations.",
+    "Building AI and data science systems for semiconductor manufacturing and operations.",
   SimplifyNext:
     "Delivered end-to-end automation and AI solutions for four major clients.",
   NIE: "Built ML pipelines and analytics tools that cut review effort by 70%.",
   BearingPoint:
-    "Developed GenAI and AML prototypes for banking clients in Europe and Asia.",
+    "Delivered GenAI and AML solutions for banking clients in Europe and Asia.",
   Keppel:
     "Built analytics dashboards across four countries, improving satisfaction by 20%.",
   IRAS:
-    "Engineered datasets exceeding one billion rows and improved system speed by 8x.",
+    "Engineered national-scale tax data pipelines, making core queries 8x faster and raising processing efficiency by 15%.",
 };
 
 const educationSummaries: Record<string, string> = {
@@ -47,12 +47,6 @@ const educationSummaries: Record<string, string> = {
   "ku-exchange": "Data Analytics coursework, graded A+.",
 };
 
-const measurements = [
-  { value: "1B+", label: "Rows transformed", source: "IRAS" },
-  { value: "8x", label: "System speed", source: "IRAS" },
-  { value: "70%", label: "Review effort removed", source: "NIE" },
-  { value: "20%", label: "Satisfaction gain", source: "Keppel" },
-];
 
 const legend: { category: Category; label: string }[] = [
   { category: "ml", label: "Applied ML" },
@@ -142,17 +136,6 @@ export default function Home() {
             after.
           </p>
 
-          <dl className="measurements" aria-label="Selected measured outcomes">
-            {measurements.map((item) => (
-              <div className="measurement" key={item.label}>
-                <dt>{item.value}</dt>
-                <dd>
-                  {item.label}
-                  <span>{item.source}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
 
           <div className="hero-actions">
             <a className="button" href="mailto:nguyentuananh.kmf@gmail.com">

@@ -280,41 +280,6 @@ a:hover { color: #fff; }
   line-height: 1.55;
 }
 .positioning strong { color: var(--text-bright); font-weight: 600; }
-.measurements {
-  margin: 34px 0 0;
-  border-top: 1px solid var(--line-strong);
-}
-.measurement {
-  display: grid;
-  grid-template-columns: 104px minmax(0, 1fr);
-  gap: 18px;
-  align-items: baseline;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-}
-.measurement dt {
-  color: var(--text-bright);
-  font-family: var(--font-mono);
-  font-size: clamp(1.55rem, 2.2vw, 2rem);
-  letter-spacing: -0.04em;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.measurement dd {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 0;
-  font-size: 0.82rem;
-}
-.measurement dd span {
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
 .hero-actions {
   display: flex;
   align-items: center;

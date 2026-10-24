@@ -92,14 +92,14 @@ components:
 
 **Creative North Star: "The Wafer Lot Record"**
 
-The portfolio is read as a fab lot record: one measured silicon surface, each role a numbered site die, each outcome a yield reading. The page is dark because it is an inspection station, not a marketing page; light is scarce and earned by the dies and figures that carry evidence.
+The portfolio is read as a fab lot record: one measured silicon surface where each role is a numbered site die. The page is dark because it is an inspection station, not a marketing page; light is scarce and earned by the dies and figures that carry evidence.
 
 Density is deliberate: a 19 × 19 die field gives the wafer its real texture, while the record sections below stay quiet, hairline-ruled, and scannable. Nothing floats on cards. Depth comes from the field itself, the concentric wafer ring, and one scan pass, never from shadows.
 
 **Key Characteristics:**
 - One full-bleed wafer as the first artifact, not a hero banner.
 - A locked four-category palette used as inspection ink.
-- Hairline rows instead of cards; data tables instead of stat tiles.
+- Hairline rows instead of cards; outcomes read inside their records.
 - Archivo for voice, JetBrains Mono for measurement.
 - Zero-JS inspection: dies are anchors, records take `:target` state.
 
@@ -170,13 +170,12 @@ Dies are squares with 2px gaps, clipped by a circle. The wafer is the only round
 - **Primary button**: Text Primary ground, Silicon Void text, 46px tall, 2px radius. Hover flips to Lot Violet with white text.
 - **Nav link**: mono label in Text Muted, full status-bar height for a 64px touch target; hover to Text Primary.
 - **Record row**: three-column hairline row; `:target` adds a Violet Die ground with an inset 1px violet rule.
-- **Measurement row**: mono figure (clamp 1.55–2rem) against a label and a mono source, separated by hairlines.
 - **Status bar**: 64px sticky bar, mono labels, brand at left, three nav links at right.
 
 ## Do's and Don'ts
 
 - Do keep the wafer as the first artifact; never demote it to a decorative image.
-- Do keep every figure traceable to its source role in the same row or measurement.
+- Do keep every outcome traceable to its source role in the same record.
 - Do use the category inks only on dies, ticks, and target states.
 - Do keep records as hairline rows on the ground.
 - Don't add cards, shadows, gradients, glass, or glow.
