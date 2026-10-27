@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Archivo, JetBrains_Mono } from "next/font/google";
+import { Archivo } from "next/font/google";
 import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,20 +11,17 @@ const archivo = Archivo({
   weight: ["400", "500", "600"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
 export const metadata: Metadata = {
   title: "Jerry Nguyen - Data Scientist",
   description:
     "Data scientist focused on applied machine learning, analytics, and operational impact.",
   icons: {
-    icon: "/icons/favicon.ico",
+    icon: [
+      { url: "/icons/favicon.svg", type: "image/svg+xml" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
     shortcut: "/icons/favicon.ico",
-    apple: "/icons/favicon.ico",
+    apple: "/icons/apple-touch-icon.png",
   },
   metadataBase: new URL("https://anh-nguyenn.github.io/"),
   openGraph: {
@@ -43,20 +40,20 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#101314",
-  colorScheme: "dark",
+  themeColor: "#fffefd",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${jetbrainsMono.variable}`}
+      className={archivo.variable}
       suppressHydrationWarning
     >
       <body>
-        <a className="skip-link" href="#record">
-          Skip to process record
+        <a className="skip-link" href="#experience">
+          Skip to experience
         </a>
         <Header />
         <main>{children}</main>

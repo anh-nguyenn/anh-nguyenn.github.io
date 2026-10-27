@@ -22,7 +22,7 @@ const work = [
   {
     slug: "NIE",
     company: "National Institute of Education (NIE)",
-    title: "AI Research Assistant",
+    title: "AI Research Assistant (Part-time)",
     start: "May 2025",
     end: "Aug 2025",
     description:

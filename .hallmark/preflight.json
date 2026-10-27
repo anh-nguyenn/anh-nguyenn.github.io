@@ -1,0 +1,12 @@
+{
+  "scanned": "2026-10-27",
+  "findings": {
+    "fonts": "Archivo via next/font/google in src/app/layout.tsx",
+    "palette": "White background, dark ink, plum links and amber frame drawn from the user-provided Cozy Pixel Panda Coding Haven.jpg",
+    "motion": "Minimal CSS transitions with reduced motion fallback",
+    "spacing": "Compact ruled rows on a 4px rhythm with two-column desktop layout",
+    "framework": "Next.js 15 app router"
+  },
+  "preserve": ["Archivo", "all portfolio facts and links", "all section anchors", "compact desktop layout"],
+  "introduce": ["user-provided panda artwork in the hero", "white pixel-inspired palette", "expanded open source descriptions"]
+}

@@ -12,7 +12,7 @@ Recruiters and hiring managers evaluating Jerry for data science and applied ML 
 
 ## Product Purpose
 
-A concise single-page portfolio that presents Jerry Nguyen's selected work experience, education, and contact routes. Success is a conversation: an email, LinkedIn message, referral, or interview, not a long browsing session.
+A concise single-page portfolio that presents Jerry Nguyen's recent projects, work experience, education, open source contributions, and contact routes. Success is a conversation: an email, LinkedIn message, referral, or interview, not a long browsing session.
 
 ## Positioning
 
@@ -24,9 +24,9 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 
 ## Capabilities and Constraints
 
-- Current surface is a single-page profile: hero, professional facts, work experience, education, and contact.
+- Current surface is a single-page profile: introduction, work experience, education, open source contributions, recent projects, and contact. Earlier roles are available in an expandable section.
 - Detail routes for education, work, projects, and blog were removed in the July 2026 redesign and are legacy, not current product scope.
-- Current copy is sourced from `src/data/work.ts` and `src/data/education.ts`; older project and blog data remain in the repository but are not part of the current surface.
+- Current copy is sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`; older project, award, volunteering, and blog data remain in the repository but are not part of the current surface.
 - Static export deployed to the GitHub Pages user site at `https://anh-nguyenn.github.io/` through `.github/workflows/deploy-pages.yml`.
 - Stack: Next.js App Router, React, TypeScript, Tailwind CSS v4, static export.
 - Existing metrics and assets are approved for public use as written; future work must not invent new claims, clients, testimonials, or benchmarks.
@@ -37,7 +37,7 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 - Public name: Jerry Nguyen; full name: Jerry Nguyen Tuan Anh.
 - Based in Singapore.
 - Voice in current copy: direct, understated, technical, first-person, no hype.
-- Contact channels: nguyentuananh.kmf@gmail.com, github.com/jerrynguyentuananh, linkedin.com/in/jerrynguyentuananh.
+- Contact channels: nguyentuananh.kmf@gmail.com, github.com/anh-nguyenn, linkedin.com/in/jerrynguyentuananh.
 - Photos, PDFs, and project images in `public/` are approved for use.
 
 ## Evidence on Hand
@@ -45,6 +45,8 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 - Six roles in `src/data/work.ts`: GlobalFoundries, SimplifyNext, NIE, BearingPoint, Keppel, and IRAS, with dates, locations, and outcome metrics (8x query speed, 15% efficiency gain, 70% review reduction, 20% satisfaction gain, four major clients).
 - Two education entries in `src/data/education.ts`: NTU B.Eng in Information Engineering & Media (Highest Distinction, Dean's List) and a Korea University winter exchange (A+).
 - Six project entries in `src/data/projects.ts` with images under `public/projects/`.
+- Recent public projects: LocalInk and Accent Trainer, linked to their GitHub Pages deployments.
+- Five merged pull requests under `github.com/anh-nguyenn` across Liger-Kernel, GPTQModel, ms-swift, and llm-compressor, verified on October 27, 2026.
 - Supporting PDFs under `public/pdf/` and photos under `public/ntu/`, `public/ku/`, and `public/`.
 - Contact and social profiles listed above.
 - No testimonials, press coverage, or client logos are documented; do not fabricate them.

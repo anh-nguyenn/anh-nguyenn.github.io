@@ -1,0 +1,61 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "compact index",
+  "theme": "Cozy Pixel Panda Coding Haven light",
+  "axes": "image led Banner and paired ruled sections",
+  "hero": "Banner",
+  "nav": "wordmark and anchors",
+  "footer": "compact close",
+  "imagery": "user supplied panda artwork",
+  "photos": [
+   "public/Cozy Pixel Panda Coding Haven.jpg"
+  ],
+  "entry": "experience then education",
+  "fingerprint": "white-pixel-banner-paired-index",
+  "sections": [
+   "intro",
+   "experience",
+   "education",
+   "open-source",
+   "projects",
+   "contact"
+  ],
+  "signature": "Jerry and panda artwork",
+  "waived": [
+   "44c",
+   "59"
+  ],
+  "prompt": "light white minimal portfolio using Cozy Pixel Panda Coding Haven",
+  "date": "2026-10-27"
+ },
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "compact index",
+  "theme": "locked design.md",
+  "axes": "paired content columns",
+  "hero": "settled",
+  "nav": "wordmark and anchors",
+  "footer": "compact close",
+  "imagery": "none",
+  "photos": [],
+  "entry": "work and experience paired",
+  "fingerprint": "compact-index-paired-rows",
+  "sections": [
+   "intro",
+   "projects",
+   "experience",
+   "education",
+   "open-source",
+   "contact"
+  ],
+  "signature": "work and experience together",
+  "waived": [],
+  "prompt": "minimal redesign with less scrolling",
+  "date": "2026-10-27"
+ }
+]

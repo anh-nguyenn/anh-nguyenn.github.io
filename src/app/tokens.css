@@ -1,0 +1,19 @@
+/* Hallmark · v2.0.0 · tokens: Cozy Pixel Panda Coding Haven · Jerry Nguyen portfolio */
+:root {
+  --background: #fffefd;
+  --header: #fffefd;
+  --surface: #f7f5f2;
+  --foreground: #262239;
+  --secondary: #50465a;
+  --muted: #625c69;
+  --line: #ddd8dc;
+  --accent: #503c63;
+  --accent-hover: #372849;
+  --on-dark: #fff0d6;
+  --on-accent: #fff5e5;
+  --selection: #f5dfb7;
+  --frame: #e5aa59;
+  --frame-shadow: #b78c9a;
+  --font-stack: var(--font-body), "Helvetica Neue", Arial, sans-serif;
+  --content-width: 1120px;
+}
