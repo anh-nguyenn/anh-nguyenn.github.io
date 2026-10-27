@@ -45,4 +45,4 @@ The 1120px container opens with text beside the supplied artwork. Below, four se
 
 ## Interaction
 
-The header links to the core sections. The main action opens email; the secondary action jumps to experience. Recent project links open their deployed sites; open source names open the upstream repositories. Repository star counts load live from GitHub. Keyboard focus remains visible, and reduced motion disables smooth scrolling.
+The header links to the core sections. The main action opens email; the secondary action jumps to experience. Recent project links open their deployed sites; open source names open the upstream repositories. Repository star counts are embedded during each deployment, with approximate fallback counts if GitHub is unavailable. Keyboard focus remains visible, and reduced motion disables smooth scrolling.

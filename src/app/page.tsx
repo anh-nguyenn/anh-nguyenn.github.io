@@ -18,7 +18,38 @@ function WorkEntry({ job }: { job: (typeof work)[number] }) {
   );
 }
 
-export default function Home() {
+async function getRepositoryStars(repository: (typeof openSource)[number]) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return { count: repository.fallbackStars, approximate: true };
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${repository.repoUrl.replace("https://github.com/", "")}`,
+      {
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${token}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      },
+    );
+    if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+    const data: { stargazers_count?: number } = await response.json();
+    if (typeof data.stargazers_count !== "number") throw new Error("No star count");
+    return { count: data.stargazers_count, approximate: false };
+  } catch {
+    return { count: repository.fallbackStars, approximate: true };
+  }
+}
+
+export default async function Home() {
+  const repositories = await Promise.all(
+    openSource.map(async (repository) => ({
+      ...repository,
+      stars: await getRepositoryStars(repository),
+    })),
+  );
+
   return (
     <>
       <section className="intro container" id="top" aria-labelledby="intro-title">
@@ -89,7 +120,7 @@ export default function Home() {
           <h2 id="open-source-title">Open source contribution</h2>
         </div>
         <div className="open-source-list">
-          {openSource.map((repository) => (
+          {repositories.map((repository) => (
             <article className="open-source-entry" key={repository.repoUrl}>
               <div className="open-source-topline">
                 <h3>
@@ -97,7 +128,7 @@ export default function Home() {
                     {repository.project}
                   </a>
                 </h3>
-                <StarCount repoUrl={repository.repoUrl} />
+                <StarCount count={repository.stars.count} approximate={repository.stars.approximate} />
               </div>
               <p className="open-source-description">{repository.description}</p>
               <div className="open-source-meta">
