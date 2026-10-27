@@ -27,6 +27,13 @@ const openSource = [
     description: "A library for preparing compressed language models for production inference with vLLM. Its workflows cover quantization and other model optimizations.",
     tags: ["compression", "quantization", "vLLM"],
   },
+  {
+    project: "Phoenix",
+    repoUrl: "https://github.com/Arize-ai/phoenix",
+    fallbackStars: 12033,
+    description: "An open-source AI observability and evaluation platform for LLM and agent applications. It covers tracing, prompt and dataset evaluation, and experiment tracking.",
+    tags: ["LLM observability", "evals", "tracing"],
+  },
 ];
 
 export default openSource;

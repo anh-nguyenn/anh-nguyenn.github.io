@@ -41,7 +41,7 @@ Archivo is used throughout for readable copy and clear headings. The name is the
 
 ## Layout
 
-The 1120px container opens with text beside the supplied artwork. Below, four sections form an aligned 2×2 grid: experience, education, open source contribution, then recent projects. Open source repositories use a smaller 2×2 ruled grid within their section. At 860px and below the sections stack in reading order, and the repositories become a single list. The hero stacks at 760px. Dates align to the right on desktop and above the text on phones. Only the three most recent roles appear initially; earlier roles are in a native expandable section. Open source summaries include fuller descriptions, contributor labels, live stars, and topic tags. The contact block closes the page in a subtle tonal band.
+The 1120px container opens with text beside the supplied artwork. Below, four sections form an aligned 2×2 grid: experience, education, open source contribution, then recent projects. Open source repositories use a smaller two-column ruled grid within their section. At 860px and below the sections stack in reading order, and the repositories become a single list. The hero stacks at 760px. Dates align to the right on desktop and above the text on phones. Only the three most recent roles appear initially; earlier roles are in a native expandable section. Open source summaries include fuller descriptions, contributor labels, live stars, and topic tags. The contact block closes the page in a subtle tonal band.
 
 ## Interaction
 
