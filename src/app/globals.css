@@ -76,7 +76,7 @@ a { color: inherit; }
 .open-source-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
 .contributor-label { color: var(--accent); font-size: 0.78rem; font-weight: 600; }
 .open-source-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
-.open-source-tags li { padding: 2px 8px; background: var(--surface); color: var(--secondary); font-size: 0.75rem; }
+.open-source-tags li { padding: 2px 8px; border: 1px solid var(--line); color: var(--secondary); font-size: 0.75rem; }
 
 .contact { background: var(--surface); color: var(--foreground); scroll-margin-top: 72px; }
 .contact-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 48px; align-items: center; padding-block: 32px 36px; }
@@ -87,6 +87,12 @@ a { color: inherit; }
 .contact-socials { grid-column: 2; grid-row: 2; display: flex; justify-content: flex-end; gap: 20px; }
 .contact-socials a { color: var(--secondary); font-size: 0.88rem; text-decoration: none; }
 .contact-socials a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.visitor-stats { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px 48px; padding-block: 24px 36px; border-top: 1px solid var(--line); }
+.visitor-stats h2 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
+.visitor-stats p { margin-top: 6px; color: var(--secondary); font-size: 0.88rem; }
+.visitor-stats a { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 0.82rem; font-weight: 600; text-underline-offset: 4px; }
+.visitor-stats a:hover { text-decoration-thickness: 2px; }
+.visitor-stats-image { display: block; width: auto; max-width: 100%; height: auto; }
 .site-footer { background: var(--surface); color: var(--foreground); border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 16px; }
 .footer-inner p { color: var(--muted); font-size: 0.82rem; }
@@ -97,6 +103,7 @@ a { color: inherit; }
   .contact-inner { display: block; }
   .contact-email { display: inline-block; margin-top: 16px; }
   .contact-socials { justify-content: flex-start; margin-top: 12px; }
+  .visitor-stats { flex-direction: column; }
 }
 @media (max-width: 760px) {
   .intro { grid-template-columns: minmax(0, 1fr); row-gap: 24px; padding-block: 40px 56px; }

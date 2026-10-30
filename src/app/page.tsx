@@ -176,6 +176,23 @@ export default async function Home() {
             <a href="https://github.com/anh-nguyenn">GitHub</a>
           </div>
         </div>
+        <div className="container visitor-stats" aria-labelledby="visitor-stats-title">
+          <div className="visitor-stats-intro">
+            <h2 id="visitor-stats-title">Visitors by country</h2>
+            <p>Live country counts, starting with this counter.</p>
+            <a href="https://s01.flagcounter.com/more/a4a14c/" target="_blank" rel="noopener noreferrer">
+              View all visitor statistics
+            </a>
+          </div>
+          {/* The remote image records a visit and updates its country counts on each page load. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="visitor-stats-image"
+            src="https://s01.flagcounter.com/count2/a4a14c/bg_FFFFFF/txt_262239/border_DDD8DC/columns_3/maxflags_30/viewers_Visitors/labels_1/pageviews_1/flags_1/percent_0/"
+            alt="Live visitor counts by country, displayed with flags and numbers"
+            decoding="async"
+          />
+        </div>
       </section>
     </>
   );
