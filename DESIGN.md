@@ -1,48 +1,51 @@
 ---
-name: Jerry Nguyen — Cozy Pixel Portfolio
-description: A concise portfolio using the colors and mood of Jerry's panda artwork.
+name: Jerry Nguyen — Studio Proof Portfolio
+description: An editorial portfolio that treats Jerry's work as a carefully set proof sheet.
 colors:
-  background: "#ffffff"
-  surface: "#ffffff"
-  foreground: "#262239"
-  secondary: "#50465a"
-  muted: "#625c69"
-  line: "#ddd8dc"
-  accent: "#503c63"
+  background: "oklch(97.2% 0.006 215)"
+  surface: "oklch(94% 0.009 215)"
+  foreground: "oklch(16% 0.032 250)"
+  secondary: "oklch(34% 0.022 245)"
+  line: "oklch(84% 0.010 225)"
+  accent: "oklch(68% 0.172 50)"
 typography:
   body:
-    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
+    fontFamily: "Geist, Arial, sans-serif"
     fontSize: "1rem"
-    lineHeight: 1.6
+    lineHeight: 1.55
   display:
-    fontFamily: "Archivo, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(4.3rem, 6.5vw, 6.5rem)"
-    fontWeight: 600
-    letterSpacing: "-0.04em"
+    fontFamily: "Hedvig Letters Serif, Georgia, serif"
+    fontSize: "clamp(6rem, 12.4vw, 13.2rem)"
+    fontWeight: 400
+    letterSpacing: "-0.055em"
 spacing:
-  contentWidth: "1120px"
-  desktopGutter: "32px"
-  mobileGutter: "20px"
+  contentWidth: "1440px"
+  desktopGutter: "64px"
+  mobileGutter: "16px"
 ---
 
-# Design System: Jerry Nguyen — Cozy Pixel Portfolio
+# Design System: Jerry Nguyen — Studio Proof Portfolio
 
 ## Purpose
 
-Help a recruiter or collaborator understand Jerry's work and reach him quickly. The page starts with a direct introduction, then presents recent projects, experience, education, verified open source contributions, and contact details.
+Help a recruiter or collaborator understand Jerry's shipped projects, professional experience, and open source work, then contact him. The single page stays direct and scannable.
 
 ## Visual direction
 
-The supplied Cozy Pixel Panda Coding Haven artwork leads the hero. The page uses a white ground throughout with dark ink, plum links, amber framing, and muted mauve from the image. One framed image and squared details supply the playful character; the work below stays in compact ruled rows without extra illustrations or animation.
+A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. His existing panda artwork remains a small personal artifact beside the introduction. A capture of the live LocalInk website anchors the project index. Experience forms a ledger, open source sits on a dark field, education reads as a compact record, and the full email address leads the contact close.
 
 ## Typography and color
 
-Archivo is used throughout for readable copy and clear headings. The name is the largest element; section headings form a clear second level; role and project titles form the third. Body text stays readable at 16px. Dark ink and plum links sit on white surfaces.
+Hedvig Letters Serif sets the name and headings; Geist carries all body copy, navigation, labels, and metadata. The page uses sentence case without tracked labels. Orange is reserved for the main action, the name's period, and subtle link or crop marks. All color and font values live in `src/app/tokens.css`.
 
 ## Layout
 
-The 1120px container opens with text beside the supplied artwork. Below, four sections form an aligned 2×2 grid: experience, education, open source contribution, then recent projects. Open source repositories use a smaller two-column ruled grid within their section. At 860px and below the sections stack in reading order, and the repositories become a single list. The hero stacks at 760px. Dates align to the right on desktop and above the text on phones. Only the three most recent roles appear initially; earlier roles are in a native expandable section. Open source summaries include fuller descriptions, contributor labels, live stars, and topic tags. The contact block and visitor counts close the page on the same white background.
+A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The hero fills the first desktop screen. Projects use wide ruled rows; experience and education use a left heading beside detailed entries; open source uses two columns on desktop and one on phones. The final repository spans both desktop columns. All lists remain readable on a phone, and the existing experience disclosure remains native.
 
 ## Interaction
 
-The header links to the core sections. The main action opens email; the secondary action jumps to experience. Recent project links open their deployed sites; open source names open the upstream repositories. Repository star counts are embedded during each deployment, with approximate fallback counts if GitHub is unavailable. A live image records visitors by country and links to its full statistics page. Keyboard focus remains visible, and reduced motion disables smooth scrolling.
+The header links to projects, experience, and contact. The hero opens email or jumps to experience. Project links and repository names retain their existing destinations. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible and reduced-motion preferences disable smooth scrolling.
+
+## Implementation
+
+`src/app/page.tsx` owns the single page. Content remains sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`. `src/app/globals.css` holds page composition; `src/app/tokens.css` and `src/app/base.css` hold the design tokens and base rules.

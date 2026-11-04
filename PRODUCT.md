@@ -46,7 +46,7 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 - Two education entries in `src/data/education.ts`: NTU B.Eng in Information Engineering & Media (Highest Distinction, Dean's List) and a Korea University winter exchange (A+).
 - Six project entries in `src/data/projects.ts` with images under `public/projects/`.
 - Recent public projects: LocalInk and Accent Trainer, linked to their GitHub Pages deployments.
-- Five merged pull requests under `github.com/anh-nguyenn` across Liger-Kernel, GPTQModel, ms-swift, and llm-compressor, verified on October 27, 2026.
+- Verified open source work includes Liger-Kernel, GPTQModel, ms-swift, llm-compressor, and a merged DeepEval contribution; the site also lists Phoenix and PEFT.
 - Supporting PDFs under `public/pdf/` and photos under `public/ntu/`, `public/ku/`, and `public/`.
 - Contact and social profiles listed above.
 - No testimonials, press coverage, or client logos are documented; do not fabricate them.

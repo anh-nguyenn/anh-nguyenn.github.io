@@ -6,8 +6,8 @@ export default function Header() {
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Jerry Nguyen, home">Jerry Nguyen</Link>
         <nav aria-label="Primary navigation">
-          <Link href="/#experience">Experience</Link>
           <Link href="/#projects">Projects</Link>
+          <Link href="/#experience">Experience</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
       </div>

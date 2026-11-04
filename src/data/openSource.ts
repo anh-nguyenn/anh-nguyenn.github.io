@@ -1,5 +1,12 @@
 const openSource = [
   {
+    project: "DeepEval",
+    repoUrl: "https://github.com/confident-ai/deepeval",
+    fallbackStars: 19291,
+    description: "An open-source framework for evaluating LLM applications. It supports testing models, prompts, RAG pipelines, and AI agents with evaluation metrics and datasets.",
+    tags: ["LLM evaluation", "RAG", "AI agents"],
+  },
+  {
     project: "Liger-Kernel",
     repoUrl: "https://github.com/linkedin/Liger-Kernel",
     fallbackStars: 6677,

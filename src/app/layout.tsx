@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Archivo } from "next/font/google";
+import { Hedvig_Letters_Serif } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const archivo = Archivo({
-  variable: "--font-body",
+const hedvig = Hedvig_Letters_Serif({
+  variable: "--font-hedvig",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={archivo.variable}
+      className={`${hedvig.variable} ${GeistSans.variable}`}
       suppressHydrationWarning
     >
       <body>

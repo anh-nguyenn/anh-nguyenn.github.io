@@ -3,6 +3,36 @@
   "mode": "redesign",
   "depth": "full",
   "scope": "page",
+  "shape": "index-led dossier",
+  "theme": "Studio",
+  "axes": "light/roman-serif/warm",
+  "hero": "Ledge",
+  "nav": "wordmark and anchors",
+  "footer": "colophon",
+  "imagery": "existing panda artwork and live LocalInk capture",
+  "photos": [],
+  "entry": "projects and product capture",
+  "fingerprint": "studio-ledge-project-proof-ledger-dark-index",
+  "sections": [
+   "intro",
+   "projects",
+   "experience",
+   "open-source",
+   "education",
+   "contact"
+  ],
+  "signature": "oversized Jerry Nguyen proof name",
+  "waived": [
+   "44c",
+   "59"
+  ],
+  "prompt": "full professional redesign of Jerry Nguyen portfolio",
+  "date": "2026-11-05"
+ },
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
   "shape": "compact index",
   "theme": "Cozy Pixel Panda Coding Haven light",
   "axes": "image led Banner and paired ruled sections",
