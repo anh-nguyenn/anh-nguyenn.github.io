@@ -64,52 +64,15 @@ export default async function Home() {
                 <a className="text-link" href="#experience">Explore my work</a>
               </div>
             </div>
-            <figure className="intro-art">
-              <Image
-                src="/Cozy%20Pixel%20Panda%20Coding%20Haven.jpg"
-                width="877"
-                height="877"
-                alt="Pixel art of a panda coding at a desk at night"
-                priority
-                unoptimized
-              />
-            </figure>
+            <div className="hero-sculpture" aria-hidden="true">
+              <div className="hero-plane">
+                <span className="hero-initials">JN</span>
+                <span className="hero-axis hero-axis-horizontal" />
+                <span className="hero-axis hero-axis-vertical" />
+              </div>
+            </div>
           </div>
           <div className="intro-bottom-rule" aria-hidden="true" />
-        </div>
-      </section>
-
-      <section className="projects-section" id="projects" aria-labelledby="projects-title">
-        <div className="container">
-          <div className="section-intro">
-            <h2 id="projects-title">Recent projects</h2>
-            <p>Software made to solve a specific problem, then put into people&apos;s hands.</p>
-          </div>
-          <div className="project-list">
-            {recentProjects.map((project) => (
-              <article className="project-entry" key={project.url}>
-                <div className="project-main">
-                  <h3>{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
-                </div>
-                <div className="project-side">
-                  <p className="project-stack">{project.stack.split(" · ").join(", ")}</p>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">Visit project</a>
-                </div>
-                {project.name === "LocalInk" && (
-                  <figure className="project-image">
-                    <Image
-                      src="/projects/localink-site.webp"
-                      width={1600}
-                      height={1000}
-                      alt="LocalInk website showing its macOS screen annotation app in use"
-                      unoptimized
-                    />
-                  </figure>
-                )}
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -133,11 +96,43 @@ export default async function Home() {
         </div>
       </section>
 
+      <section className="projects-section" id="projects" aria-labelledby="projects-title">
+        <div className="container">
+          <div className="section-intro">
+            <h2 id="projects-title">Recent projects</h2>
+            <p>A macOS annotation app and a private space for pronunciation practice.</p>
+          </div>
+          <div className="project-list">
+            {recentProjects.map((project) => (
+              <article className="project-entry" key={project.url}>
+                <figure className="project-image">
+                  <Image
+                    src={project.image}
+                    width={project.imageWidth}
+                    height={project.imageHeight}
+                    alt={project.imageAlt}
+                    unoptimized
+                  />
+                </figure>
+                <div className="project-main">
+                  <h3>{project.name}</h3>
+                  <p className="project-description">{project.description}</p>
+                </div>
+                <div className="project-side">
+                  <p className="project-stack">{project.stack.split(" · ").join(", ")}</p>
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">Visit project</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="open-source-section" id="open-source" aria-labelledby="open-source-title">
         <div className="container">
           <div className="section-intro open-source-intro">
             <h2 id="open-source-title">Open source contribution</h2>
-            <p>Contributions to the tools behind modern machine learning.</p>
+            <p>Work across LLM training, quantization, evaluation, and observability.</p>
           </div>
           <div className="open-source-list">
             {repositories.map((repository) => (

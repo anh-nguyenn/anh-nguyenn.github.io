@@ -24,7 +24,7 @@ Visitors arrive from a CV, LinkedIn, GitHub, referrals, or job applications, oft
 
 ## Capabilities and Constraints
 
-- Current surface is a single-page profile: introduction, work experience, education, open source contributions, recent projects, and contact. Earlier roles are available in an expandable section.
+- Current surface is a single-page profile: introduction, work experience, recent projects, open source contributions, education, and contact. Earlier roles are available in an expandable section.
 - Detail routes for education, work, projects, and blog were removed in the July 2026 redesign and are legacy, not current product scope.
 - Current copy is sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`; older project, award, volunteering, and blog data remain in the repository but are not part of the current surface.
 - Static export deployed to the GitHub Pages user site at `https://anh-nguyenn.github.io/` through `.github/workflows/deploy-pages.yml`.

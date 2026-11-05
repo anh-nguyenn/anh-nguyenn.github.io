@@ -7,6 +7,6 @@
     "spacing": "Hallmark scale in src/app/base.css; 1440px centered container and responsive gutters",
     "framework": "Next.js 15 app router with static export to GitHub Pages"
   },
-  "preserve": ["all portfolio facts and links", "all section anchors", "Studio proof-paper visual system", "LocalInk product capture"],
+  "preserve": ["all portfolio facts and links", "all section anchors", "Studio proof-paper visual system", "user-provided LocalInk and Accent Trainer screenshots"],
   "introduce": []
 }

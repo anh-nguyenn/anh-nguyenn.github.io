@@ -32,7 +32,7 @@ Help a recruiter or collaborator understand Jerry's shipped projects, profession
 
 ## Visual direction
 
-A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. His existing panda artwork remains a small personal artifact beside the introduction. A capture of the live LocalInk website anchors the project index. Experience forms a ledger, open source sits on a dark field, education reads as a compact record, and the full email address leads the contact close.
+A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. A typographic plane formed from his initials adds depth through a short entrance animation. Experience follows the hero. The two project screenshots appear in full at their natural ratios, with crop marks aligned to their edges. A dark open source index, a compact education record, and an email-led contact close follow.
 
 ## Typography and color
 
@@ -40,11 +40,11 @@ Hedvig Letters Serif sets the name and headings; Geist carries all body copy, na
 
 ## Layout
 
-A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The hero fills the first desktop screen. Projects use wide ruled rows; experience and education use a left heading beside detailed entries; open source uses two columns on desktop and one on phones. The final repository spans both desktop columns. All lists remain readable on a phone, and the existing experience disclosure remains native.
+A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The shorter hero lets experience enter the first desktop viewport. Experience and education use a left heading beside detailed entries. Projects use two image-led columns on desktop and stack on phones; their screenshots are never cropped. Open source uses two columns on desktop and one on phones. The final repository spans both desktop columns. The existing experience disclosure remains native.
 
 ## Interaction
 
-The header links to projects, experience, and contact. The hero opens email or jumps to experience. Project links and repository names retain their existing destinations. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible and reduced-motion preferences disable smooth scrolling.
+The header links to experience, projects, and contact. The hero opens email or jumps to experience. Project links and repository names retain their existing destinations. The typographic plane settles once on load; reduced-motion preferences disable this motion and smooth scrolling. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible.
 
 ## Implementation
 

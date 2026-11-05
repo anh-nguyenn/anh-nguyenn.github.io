@@ -3,30 +3,30 @@
   "mode": "redesign",
   "depth": "full",
   "scope": "page",
-  "shape": "index-led dossier",
+  "shape": "experience-led dossier",
   "theme": "Studio",
   "axes": "light/roman-serif/warm",
-  "hero": "Ledge",
+  "hero": "Banner",
   "nav": "wordmark and anchors",
   "footer": "colophon",
-  "imagery": "existing panda artwork and live LocalInk capture",
+  "imagery": "user-supplied LocalInk and Accent Trainer screenshots",
   "photos": [],
-  "entry": "projects and product capture",
-  "fingerprint": "studio-ledge-project-proof-ledger-dark-index",
+  "entry": "experience then complete project screenshots",
+  "fingerprint": "studio-banner-experience-led-project-pair-dark-index",
   "sections": [
    "intro",
-   "projects",
    "experience",
+   "projects",
    "open-source",
    "education",
    "contact"
   ],
-  "signature": "oversized Jerry Nguyen proof name",
+  "signature": "animated typographic JN plane",
   "waived": [
    "44c",
    "59"
   ],
-  "prompt": "full professional redesign of Jerry Nguyen portfolio",
+  "prompt": "experience first, user project screenshots, professional 3D hero motion",
   "date": "2026-11-05"
  },
  {
