@@ -3,6 +3,8 @@ import openSource from "@/data/openSource";
 import recentProjects from "@/data/recentProjects";
 import work from "@/data/work";
 import StarCount from "@/components/StarCount";
+import HeroScene from "@/components/HeroScene";
+import SpatialSurface from "@/components/SpatialSurface";
 import Image from "next/image";
 
 function WorkEntry({ job }: { job: (typeof work)[number] }) {
@@ -64,13 +66,7 @@ export default async function Home() {
                 <a className="text-link" href="#experience">Explore my work</a>
               </div>
             </div>
-            <div className="hero-sculpture" aria-hidden="true">
-              <div className="hero-plane">
-                <span className="hero-initials">JN</span>
-                <span className="hero-axis hero-axis-horizontal" />
-                <span className="hero-axis hero-axis-vertical" />
-              </div>
-            </div>
+            <HeroScene />
           </div>
           <div className="intro-bottom-rule" aria-hidden="true" />
         </div>
@@ -82,7 +78,7 @@ export default async function Home() {
             <h2 id="experience-title">Experience</h2>
             <p>Across manufacturing, consulting, research, and public systems.</p>
           </div>
-          <div className="experience-content">
+          <SpatialSurface className="experience-content">
             <div className="work-list">
               {work.slice(0, 3).map((job) => <WorkEntry job={job} key={job.slug} />)}
             </div>
@@ -92,7 +88,7 @@ export default async function Home() {
                 {work.slice(3).map((job) => <WorkEntry job={job} key={job.slug} />)}
               </div>
             </details>
-          </div>
+          </SpatialSurface>
         </div>
       </section>
 
@@ -104,25 +100,29 @@ export default async function Home() {
           </div>
           <div className="project-list">
             {recentProjects.map((project) => (
-              <article className="project-entry" key={project.url}>
-                <figure className="project-image">
-                  <Image
-                    src={project.image}
-                    width={project.imageWidth}
-                    height={project.imageHeight}
-                    alt={project.imageAlt}
-                    unoptimized
-                  />
-                </figure>
-                <div className="project-main">
-                  <h3>{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
-                </div>
-                <div className="project-side">
-                  <p className="project-stack">{project.stack.split(" · ").join(", ")}</p>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer">Visit project</a>
-                </div>
-              </article>
+              <SpatialSurface className="project-surface" key={project.url}>
+                <article className="project-entry">
+                  <a className="project-preview" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name}`}>
+                    <figure className="project-image">
+                      <Image
+                        src={project.image}
+                        width={project.imageWidth}
+                        height={project.imageHeight}
+                        alt={project.imageAlt}
+                        unoptimized
+                      />
+                    </figure>
+                  </a>
+                  <div className="project-main">
+                    <h3>{project.name}</h3>
+                    <p className="project-description">{project.description}</p>
+                  </div>
+                  <div className="project-side">
+                    <p className="project-stack">{project.stack.split(" · ").join(", ")}</p>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">Visit project</a>
+                  </div>
+                </article>
+              </SpatialSurface>
             ))}
           </div>
         </div>
@@ -134,7 +134,7 @@ export default async function Home() {
             <h2 id="open-source-title">Open source contribution</h2>
             <p>Work across LLM training, quantization, evaluation, and observability.</p>
           </div>
-          <div className="open-source-list">
+          <SpatialSurface className="open-source-list">
             {repositories.map((repository) => (
               <article className="open-source-entry" key={repository.repoUrl}>
                 <div className="open-source-name">
@@ -150,14 +150,14 @@ export default async function Home() {
                 </div>
               </article>
             ))}
-          </div>
+          </SpatialSurface>
         </div>
       </section>
 
       <section className="education-section" id="education" aria-labelledby="education-title">
         <div className="container education-layout">
           <h2 id="education-title">Education</h2>
-          <div className="education-list">
+          <SpatialSurface className="education-list">
             {education.map((item) => (
               <article className="education-entry" key={item.slug} id={item.slug}>
                 <p className="education-date">{item.start} to {item.end}</p>
@@ -171,21 +171,23 @@ export default async function Home() {
                 </div>
               </article>
             ))}
-          </div>
+          </SpatialSurface>
         </div>
       </section>
 
       <section className="contact" id="contact" aria-labelledby="contact-title">
-        <div className="container contact-inner">
-          <div>
-            <h2 id="contact-title">Let&apos;s talk.</h2>
-            <p>Have a question or something to work on together?</p>
-          </div>
-          <a className="contact-email" href="mailto:nguyentuananh.kmf@gmail.com">nguyentuananh.kmf@gmail.com</a>
-          <div className="contact-socials">
-            <a href="https://www.linkedin.com/in/jerrynguyentuananh/">LinkedIn</a>
-            <a href="https://github.com/anh-nguyenn">GitHub</a>
-          </div>
+        <div className="container contact-stage">
+          <SpatialSurface className="contact-inner">
+            <div>
+              <h2 id="contact-title">Let&apos;s talk.</h2>
+              <p>Have a question or something to work on together?</p>
+            </div>
+            <a className="contact-email" href="mailto:nguyentuananh.kmf@gmail.com">nguyentuananh.kmf@gmail.com</a>
+            <div className="contact-socials">
+              <a href="https://www.linkedin.com/in/jerrynguyentuananh/">LinkedIn</a>
+              <a href="https://github.com/anh-nguyenn">GitHub</a>
+            </div>
+          </SpatialSurface>
         </div>
         <div className="container visitor-stats" aria-labelledby="visitor-stats-title">
           <div className="visitor-stats-intro">

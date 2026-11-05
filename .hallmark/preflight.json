@@ -3,7 +3,7 @@
   "findings": {
     "fonts": "Hedvig Letters Serif via next/font/google and Geist Sans from the geist package in src/app/layout.tsx",
     "palette": "Cool proof paper, blue-black ink, and a restrained orange signal in src/app/tokens.css",
-    "motion": "Minimal CSS transitions with reduced-motion fallback",
+    "motion": "Pointer-responsive 3D hero and content planes with spring motion, subtle project lifts, and reduced-motion fallback",
     "spacing": "Hallmark scale in src/app/base.css; 1440px centered container and responsive gutters",
     "framework": "Next.js 15 app router with static export to GitHub Pages"
   },

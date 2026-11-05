@@ -32,7 +32,7 @@ Help a recruiter or collaborator understand Jerry's shipped projects, profession
 
 ## Visual direction
 
-A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. A typographic plane formed from his initials adds depth through a short entrance animation. Experience follows the hero. The two project screenshots appear in full at their natural ratios, with crop marks aligned to their edges. A dark open source index, a compact education record, and an email-led contact close follow.
+A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. A layered JN object gives it a spatial counterpoint: an extruded ink plate, two translucent proof sheets, orbital lines, a grid, and a soft cast shadow. Raised planes then carry that depth through experience, both projects, the open-source index, education, and contact. The two project screenshots appear in full at their natural ratios. The open-source plane sits on a dark stage.
 
 ## Typography and color
 
@@ -40,12 +40,12 @@ Hedvig Letters Serif sets the name and headings; Geist carries all body copy, na
 
 ## Layout
 
-A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The shorter hero lets experience enter the first desktop viewport. Experience and education use a left heading beside detailed entries. Projects use two image-led columns on desktop and stack on phones; their screenshots are never cropped. Open source uses two columns on desktop and one on phones. The final repository spans both desktop columns. The existing experience disclosure remains native.
+A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The shorter hero lets experience enter the first desktop viewport. Experience and education use a left heading beside detailed entries on raised sheets. Projects use two image-led floating planes on desktop and stack on phones; their screenshots are never cropped. Open source uses a dark elevated plane with two columns on desktop and one on phones. The final repository spans both desktop columns. The existing experience disclosure remains native.
 
 ## Interaction
 
-The header links to experience, projects, and contact. The hero opens email or jumps to experience. Project links and repository names retain their existing destinations. The typographic plane settles once on load; reduced-motion preferences disable this motion and smooth scrolling. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible.
+The header links to experience, projects, and contact. The hero opens email or jumps to experience. The JN object settles once on load and tilts gently toward a mouse or pen pointer. Each content plane responds to the pointer with a smaller spring tilt, creating depth throughout the page. Project screenshots lift slightly on hover and keyboard focus and link directly to their projects. Reduced-motion preferences disable the entrance, pointer response, screenshot lift, and smooth scrolling; the static shadows and edges still convey depth. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible, including on the dark index.
 
 ## Implementation
 
-`src/app/page.tsx` owns the single page. Content remains sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`. `src/app/globals.css` holds page composition; `src/app/tokens.css` and `src/app/base.css` hold the design tokens and base rules.
+`src/app/page.tsx` owns the single page. `src/components/HeroScene.tsx` owns the pointer-responsive scene; `src/components/SpatialSurface.tsx` applies the same motion language to content panels. Content remains sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`. `src/app/globals.css` holds page composition; `src/app/tokens.css` and `src/app/base.css` hold the design tokens and base rules.
