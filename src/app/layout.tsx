@@ -1,16 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Hedvig_Letters_Serif } from "next/font/google";
+import "./experience.css";
 import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import React, { ReactNode } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
-const hedvig = Hedvig_Letters_Serif({
-  variable: "--font-hedvig",
-  subsets: ["latin"],
-  weight: "400",
-});
+import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Jerry Nguyen - Data Scientist",
@@ -41,24 +35,27 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
-  colorScheme: "light",
+  themeColor: "#0b0d12",
+  colorScheme: "dark",
 };
+
+const bootScript = `(function(){var d=document.documentElement,m=matchMedia,n=navigator,r=m('(prefers-reduced-motion: reduce)').matches,c=m('(pointer: coarse)').matches||innerWidth<768,low=(n.deviceMemory&&n.deviceMemory<=2)||(n.connection&&n.connection.saveData);d.dataset.js='1';d.dataset.motion=r?'reduce':'full';d.dataset.gl=(r||c||low)?'off':'on';if(r)d.dataset.loaded='1';})();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${hedvig.variable} ${GeistSans.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+      </head>
       <body>
-        <a className="skip-link" href="#experience">
-          Skip to experience
+        <a className="skip-link" href="#main-content">
+          Skip to content
         </a>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

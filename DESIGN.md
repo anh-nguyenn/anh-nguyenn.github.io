@@ -1,51 +1,58 @@
 ---
-name: Jerry Nguyen — Studio Proof Portfolio
-description: An editorial portfolio that treats Jerry's work as a carefully set proof sheet.
+name: Jerry Nguyen — Spatial Scroll Portfolio
+description: A single-page portfolio told as a scroll through one persistent 3D scene.
 colors:
-  background: "oklch(97.2% 0.006 215)"
-  surface: "oklch(94% 0.009 215)"
-  foreground: "oklch(16% 0.032 250)"
-  secondary: "oklch(34% 0.022 245)"
-  line: "oklch(84% 0.010 225)"
-  accent: "oklch(68% 0.172 50)"
+  background: "oklch(14% 0.02 255)"
+  surface: "oklch(18% 0.022 255)"
+  foreground: "oklch(96% 0.008 85)"
+  secondary: "oklch(86% 0.012 85)"
+  muted: "oklch(73% 0.016 250)"
+  line: "oklch(32% 0.02 255)"
+  accent: "oklch(72% 0.17 52)"
 typography:
   body:
     fontFamily: "Geist, Arial, sans-serif"
     fontSize: "1rem"
     lineHeight: 1.55
   display:
-    fontFamily: "Hedvig Letters Serif, Georgia, serif"
-    fontSize: "clamp(6rem, 12.4vw, 13.2rem)"
-    fontWeight: 400
-    letterSpacing: "-0.055em"
+    fontFamily: "Geist, Arial, sans-serif"
+    fontWeight: 600
+    letterSpacing: "-0.06em"
+  mono:
+    fontFamily: "Geist Mono, ui-monospace, monospace"
 spacing:
-  contentWidth: "1440px"
   desktopGutter: "64px"
   mobileGutter: "16px"
 ---
 
-# Design System: Jerry Nguyen — Studio Proof Portfolio
+# Design System: Jerry Nguyen — Spatial Scroll Portfolio
 
 ## Purpose
 
-Help a recruiter or collaborator understand Jerry's shipped projects, professional experience, and open source work, then contact him. The single page stays direct and scannable.
+Present experience first, then projects, open source, education and contact, as one continuous scroll. Real HTML text is layered over a single fixed WebGL canvas. The scene responds to scroll and pointer but never carries content.
 
 ## Visual direction
 
-A cool proof-paper ground, dark ink, fine rules, and one orange signal give the page an editorial feel. Jerry's name is the oversized first impression. A layered JN object gives it a spatial counterpoint: an extruded ink plate, two translucent proof sheets, orbital lines, a grid, and a soft cast shadow. Raised planes then carry that depth through experience, both projects, the open-source index, education, and contact. The two project screenshots appear in full at their natural ratios. The open-source plane sits on a dark stage.
+Dark, high-contrast canvas with very large, tightly tracked grotesque type and a single orange accent. One procedural hero object (a soft, distorting form) drifts to the side of the text in each section while the camera flies forward through thin rings and dust. Monospace labels give a technical, editorial register.
 
-## Typography and color
+## Experience
 
-Hedvig Letters Serif sets the name and headings; Geist carries all body copy, navigation, labels, and metadata. The page uses sentence case without tracked labels. Orange is reserved for the main action, the name's period, and subtle link or crop marks. All color and font values live in `src/app/tokens.css`.
+- **Preloader:** a percentage counter that finishes only when the scene is ready, then wipes away.
+- **Scroll:** Lenis smooth scrolling. GSAP ScrollTrigger maps each section to a continuous position that drives the camera and object keyframes.
+- **Reveals:** headings and blocks reveal on entering the viewport (masked words, fades).
+- **Project hover:** a WebGL plane showing the project screenshot follows the cursor with a velocity-driven RGB shift. Keyboard focus triggers it too.
+- **Menu and transitions:** a full-screen menu overlay; in-page links wipe a coloured curtain across the screen before jumping.
+- **Cursor:** a trailing ring that grows over links and shows a label on projects and email.
+- **Sound:** an optional, off-by-default ambient drone (Web Audio), toggled in the header.
 
-## Layout
+## Fallbacks and accessibility
 
-A centered 1440px container uses 64px desktop gutters and 16px phone gutters. The shorter hero lets experience enter the first desktop viewport. Experience and education use a left heading beside detailed entries on raised sheets. Projects use two image-led floating planes on desktop and stack on phones; their screenshots are never cropped. Open source uses a dark elevated plane with two columns on desktop and one on phones. The final repository spans both desktop columns. The existing experience disclosure remains native.
-
-## Interaction
-
-The header links to experience, projects, and contact. The hero opens email or jumps to experience. The JN object settles once on load and tilts gently toward a mouse or pen pointer. Each content plane responds to the pointer with a smaller spring tilt, creating depth throughout the page. Project screenshots lift slightly on hover and keyboard focus and link directly to their projects. Reduced-motion preferences disable the entrance, pointer response, screenshot lift, and smooth scrolling; the static shadows and edges still convey depth. Repository stars are embedded during deployment with fallback values. The visitor counter remains live and links to its detailed statistics. Keyboard focus is visible, including on the dark index.
+- The 3D bundle is a separate lazy chunk, loaded after the page `load` event and only when `html[data-gl="on"]`.
+- `data-gl` is set before first paint from: reduced motion, coarse pointer or narrow viewport, Save-Data, low device memory. It flips to `off` if WebGL is unavailable.
+- With `off`: static CSS orb instead of the canvas, project screenshots shown inline, no custom cursor.
+- `prefers-reduced-motion`: no preloader, no Lenis, no reveals, no curtain; native scrolling and instant anchor jumps.
+- Text stays real HTML. The menu is a modal dialog with focus trap, Escape to close, and an inert page behind it. Links keep their destinations and the `#section` hashes still work.
 
 ## Implementation
 
-`src/app/page.tsx` owns the single page. `src/components/HeroScene.tsx` owns the pointer-responsive scene; `src/components/SpatialSurface.tsx` applies the same motion language to content panels. Content remains sourced from `src/data/work.ts`, `src/data/education.ts`, `src/data/recentProjects.ts`, and `src/data/openSource.ts`. `src/app/globals.css` holds page composition; `src/app/tokens.css` and `src/app/base.css` hold the design tokens and base rules.
+`src/app/layout.tsx` holds the boot script and `SiteShell` (preloader, scene host, header and menu, cursor, runtime). `src/components/PortfolioPage.tsx` renders the sections from the existing data files. `src/components/three/Scene.tsx` is the whole 3D scene. `src/lib/motion.ts` holds shared runtime state and navigation. Styles live in `src/app/experience.css`; tokens in `src/app/tokens.css`.

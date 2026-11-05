@@ -12,33 +12,35 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.1",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^12.9.1",
     "geist": "^1.4.1",
+    "gsap": "^3.15.1",
+    "lenis": "^1.3.27",
     "natural": "^8.1.0",
     "next": "^15.3.5",
     "next-mdx-remote": "^5.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-icons": "^5.5.0",
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1",
-    "tech-stack-icons": "^2.1.0"
+    "tech-stack-icons": "^2.1.0",
+    "three": "^0.187.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "resolutions": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   }
 }

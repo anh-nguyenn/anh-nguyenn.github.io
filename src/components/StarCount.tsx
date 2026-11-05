@@ -15,6 +15,7 @@ export default function StarCount({
   return (
     <span
       className="star-count"
+      role="img"
       aria-label={approximate ? `About ${compact} GitHub stars` : `${count.toLocaleString("en")} GitHub stars`}
     >
       <GoStar aria-hidden="true" />
