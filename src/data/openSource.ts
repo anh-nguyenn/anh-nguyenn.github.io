@@ -1,5 +1,12 @@
 const openSource = [
   {
+    project: "Haystack",
+    repoUrl: "https://github.com/deepset-ai/haystack",
+    fallbackStars: 26929,
+    description: "An open-source Python framework for building LLM applications with modular pipelines and agents. It supports retrieval, generation, and multimodal workflows.",
+    tags: ["AI agents", "RAG", "Python"],
+  },
+  {
     project: "DeepEval",
     repoUrl: "https://github.com/confident-ai/deepeval",
     fallbackStars: 19291,
