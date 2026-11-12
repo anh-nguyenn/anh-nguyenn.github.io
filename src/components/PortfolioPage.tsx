@@ -24,7 +24,6 @@ export default function PortfolioPage({ repositories }: { repositories: Reposito
     <>
       <section className="sec sec-hero" id="top" data-section="" data-title="Intro" aria-labelledby="hero-title">
         <div className="sec-inner">
-          <p className="eyebrow hero-eyebrow" data-reveal=""><span className="signal" aria-hidden="true" /> Data scientist · Singapore</p>
           <h1 id="hero-title" className="display hero-title reveal" data-reveal="">
             <span className="line"><span className="w"><span className="wi">Jerry</span></span></span>
             <span className="line"><span className="w"><span className="wi" style={{ transitionDelay: "90ms" }}>Nguyen<em>.</em></span></span></span>

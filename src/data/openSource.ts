@@ -1,5 +1,12 @@
 const openSource = [
   {
+    project: "FastMCP",
+    repoUrl: "https://github.com/PrefectHQ/fastmcp",
+    fallbackStars: 28400,
+    description: "A Python framework for building MCP servers, clients, and interactive apps. It handles tool schemas, validation, authentication, and protocol details.",
+    tags: ["MCP", "Python", "AI agents"],
+  },
+  {
     project: "Haystack",
     repoUrl: "https://github.com/deepset-ai/haystack",
     fallbackStars: 26929,

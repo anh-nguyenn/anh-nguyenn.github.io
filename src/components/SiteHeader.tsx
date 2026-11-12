@@ -111,9 +111,6 @@ export default function SiteHeader() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Jerry Nguyen, back to top">Jerry Nguyen<span>.</span></a>
-        <p className="header-section" aria-hidden="true">
-          <span>{String(section.index).padStart(2, "0")}</span> / {section.title}
-        </p>
         <div className="header-actions">
           <button type="button" className="sound-btn" aria-pressed={sound} onClick={toggleSound}>
             <span className="sound-bars" aria-hidden="true"><i /><i /><i /><i /></span>
